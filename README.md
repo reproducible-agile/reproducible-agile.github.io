@@ -1,6 +1,6 @@
 # Reproducible Computational Geosciences @ AGILE 2017
 
-Pre-conference workshop "Reproducible Computational Geosciences" at [AGILE 2017](https://agile-online.org/index.php/home-2017)
+Pre-conference workshop at [AGILE 2017](https://agile-online.org/index.php/home-2017)
 
 ## About
 
@@ -33,7 +33,7 @@ Selected papers will be invited for presentation at the workshop.
 
 TBA
 
-## Agenda
+## Workshop agenda
 
 - Introduction/Welcome
 - Invited talks (1-2, arount 15 minutes each)
