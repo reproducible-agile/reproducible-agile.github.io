@@ -37,7 +37,7 @@ Selected papers will be invited for presentation at the workshop.
 ## Planned agenda
 
 - Introduction/Welcome
-- Invited talks (1-2, arount 15 minutes each)
+- Invited talks (1-2, ~15 minutes each)
 - Talks (10 minutes + 10 minutes discussion)
 - Discussion (60 minutes)
 
