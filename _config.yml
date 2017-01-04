@@ -12,7 +12,7 @@ title: 'Reproducible Computational Geosciences @ AGILE 2017'
 tagline: 'Reproducible Computational Geosciences'
 description: 'Workshop at the <a href="https://agile-online.org/index.php/home-2017" title="conference website">20th AGILE International Conference on Geographic Information Science</a><br />Wageningen, May 9 2017'
 url: http://o2r.info/agile-2017/
-baseurl: /
+baseurl: /agile-2017/
 
 keywords:
   - open access
