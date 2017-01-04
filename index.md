@@ -29,21 +29,27 @@ are welcome.
 Workshop papers (< 1000 words) must be submitted via pull request to the GitHub repository https://github.com/o2r-project/agile-2017 or via email to daniel.nuest@uni-muenster.de.
 Selected papers will be invited for presentation at the workshop.
 
-## Schedule
-
-TBA
-
-## Workshop agenda
+## Planned agenda
 
 - Introduction/Welcome
 - Invited talks (1-2, arount 15 minutes each)
 - Talks (10 minutes + 10 minutes discussion)
 - Discussion (60 minutes)
 
+## Schedule & presentations
+
+TBA
+
 ## Submissions
 
-[Fork the workshop repository](https://github.com/o2r-project/agile-2017#fork-destination-box) and create a new [Markdown]() document named `first_authors_last_name>.md` in the directory `submissions`. Then [create a pull request]().
+### How to submit
+
+[Fork the workshop repository](https://github.com/o2r-project/agile-2017#fork-destination-box) and create a new [Markdown](https://guides.github.com/features/mastering-markdown/) document named `first_authors_last_name.md` in the directory `submissions`. Then [create a pull request](https://github.com/o2r-project/agile-2017#fork-destination-box).
 Feedback will be given in the pull request discussion. Accepted papers will be merged and published on the website.
+
+### Review process
+
+At least one reviewer conducts an in depth review of the submission. Concrete review guidelines [are under development](https://github.com/o2r-project/agile-2017/issues/3), as is the [review process](https://github.com/o2r-project/agile-2017/issues/2).
 
 ## Programme Committee
 
