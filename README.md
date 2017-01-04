@@ -12,7 +12,7 @@ bundle exec jekyll serve # build the site
 
 The page is [build by Travis CI](https://travis-ci.org/o2r-project/agile-2017) (based on the files `.travis.yml` and `Gemfile`).
 
-[![Build Status](https://travis-ci.org/o2r-project/o2r-project.github.io.svg?branch=master)](https://travis-ci.org/o2r-project/o2r-project.github.io)
+[![Build Status](https://travis-ci.org/o2r-project/agile-2017.svg?branch=master)](https://travis-ci.org/o2r-project/agile-2017)
 
 ### Ribbon
 
