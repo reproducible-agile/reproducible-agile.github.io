@@ -1,5 +1,6 @@
 ---
 layout: default
+title: 'Submission at Reproducible Computational Geosciences Workshop @ AGILE 2017'
 exclude_from_nav: true
 ---
 

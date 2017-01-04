@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Home
 ---
 
 # Reproducible Computational Geosciences @ AGILE 2017
