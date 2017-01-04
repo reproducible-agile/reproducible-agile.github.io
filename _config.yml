@@ -1,0 +1,44 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Permalinks
+permalink:        /:year/:month/:day/:title/
+# https://github.com/poole/poole/issues/99 suggests to disable the following:
+#relative_permalinks: true
+
+# Setup
+title: 'Reproducible Computational Geosciences @ AGILE 2017'
+tagline: 'Reproducible Computational Geosciences'
+description: '<b>Reproducible Computational Geosciences</b> workshop at the <a href="https://agile-online.org/index.php/home-2017" title="conference website"> 20th AGILE International Conference on Geographic Information Science 2017</a><br />Wageningen, May 9 2017'
+url: http://o2r.info/agile-2017/
+baseurl: /
+
+keywords:
+  - open access
+  - open data
+  - open source
+  - reproducibility
+  - reproducible research
+  - giscience
+  - gis
+  - executable research
+  - executable papers
+  - one-click reproduce
+
+author:
+  name: 'workshop organization committee'
+  url: http://o2r.info/agile-2017/
+
+exclude: [README.md]
+
+github:
+  repo: https://github.com/o2r-project/agile-2017
+
+# ribbon itself by https://github.com/simonwhitaker/github-fork-ribbon-css
+ribbon:
+  show: true
+  text: 'Submit abstract'
+  url: 'https://github.com/o2r-project/agile-2017#fork-destination-box'
+
+#gems:

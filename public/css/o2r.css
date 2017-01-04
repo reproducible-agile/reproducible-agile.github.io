@@ -1,0 +1,89 @@
+.theme-base-o2r .sidebar {
+  /*background-color: #004286;*/
+  background-color: rgba(0,66,134,.5);
+  color: rgba(67,69,83,1);
+}
+.theme-base-o2r .content a,
+.theme-base-o2r .related-posts li a:hover {
+  color: #004286;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.img.rightfloat {
+    float: right;
+}
+
+.img.leftfloat {
+    float: left;
+}
+
+.small {
+    font-size: 0.75em;
+}
+
+.attribution {
+    font-size: 0.6em;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid #eee;
+    color: rgba(67,69,83,1);
+}
+
+.attributionInlineImage {
+    font-size: 0.6em;
+    margin-top: -1em;
+    color: rgba(67,69,83,1);
+}
+
+.comments_disabled {
+    font-style: italic;
+    color: rgba(67,69,83,1);
+}
+
+.github-fork-ribbon:before {
+  /* Set the base colour */
+  background-color: #004286;
+}
+
+.editor {
+  color: #9a9a9a;
+}
+
+.footnotes {
+  margin-top: 3em;
+  font-size: 0.9em;
+}
+
+/* based on https://milanaryal.com/adding-hover-anchor-links-to-header-on-github-pages-using-jekyll/ */
+.anchorjs-link {
+  color: inherit !important;
+  text-decoration: none !important; /* do not underline */
+}
+@media (max-width: 768px) {
+  /* Do not display AnchorJS icon on less than 768px view point */
+  .anchorjs-link {
+    display: none;
+  }
+}
+*:hover > .anchorjs-link:hover,
+.anchorjs-link:focus {
+  text-decoration: none !important; /* do not underline */
+  opacity: 1;
+}
+
+/* https://gist.github.com/chsh/2341675 */
+/* looks nice, but makes images look stupid
+.post p a:after, .page a:after {
+  content: "\f08e";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  font-size: 80%;
+  padding-left: 0.2em;
+}*/

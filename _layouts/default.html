@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body class="theme-base-o2r">
+    
+    {% if site.ribbon.show %}
+    <a class="github-fork-ribbon" href="{{ site.ribbon.url }}" title="{{ site.ribbon.text }}">{{ site.ribbon.text }}</a>
+    {% endif %}
+
+    {% include sidebar.html %}
+
+    <div class="content container">
+      {{ content }}
+      
+      <div class="attribution">
+           <div style="float: left; margin: 3px;">
+              <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+                <img alt="Creative Commons Licence" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+              </a>
+           </div>
+           <div>Except where otherwise noted site content created by the o2r project is licensed under a Creative Commons Attribution 4.0 International License.</div>
+      </div>
+    </div>
+
+    {% include anchors.html %}
+
+  </body>
+
+</html>

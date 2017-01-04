@@ -1,3 +1,8 @@
+---
+layout: default
+exclude_from_nav: true
+---
+
 # Submission title
 
 ## Authors
