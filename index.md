@@ -4,7 +4,7 @@ layout: default
 
 # Reproducible Computational Geosciences @ AGILE 2017
 
-Pre-conference workshop at [AGILE 2017](https://agile-online.org/index.php/home-2017)
+Pre-conference workshop at the [20th AGILE International Conference on Geographic Information Science](https://agile-online.org/index.php/home-2017), Wageningen, May 9 2017
 
 ## About
 

@@ -16,7 +16,7 @@ The page is [build by Travis CI](https://travis-ci.org/o2r-project/agile-2017) (
 
 ### Ribbon
 
-A generic "Fork me" ribbon has been added and can be configured (text, link) in the file `_config.yml`. The color is configured in `public/css/o2r.css`. The ribbon appears on all pages via `_layouts/default.html`, and stylesheets are included in `_includes/head_default.html` if enabled.
+A generic "Fork me" ribbon has been added and can be configured (text, link) in the file `_config.yml`. The color is configured in `public/css/agile.css`. The ribbon appears on all pages via `_layouts/default.html`, and stylesheets are included in `_includes/head_default.html` if enabled.
 
 ### Exclude pages from menu
 

@@ -1,11 +1,11 @@
-.theme-base-o2r .sidebar {
+.theme-base-agile .sidebar {
   /*background-color: #004286;*/
-  background-color: rgba(0,66,134,.5);
-  color: rgba(67,69,83,1);
+  background-color: rgba(0,77,155,1);
+  color: rgba(240,240,255,1);
 }
-.theme-base-o2r .content a,
-.theme-base-o2r .related-posts li a:hover {
-  color: #004286;
+.theme-base-agile .content a,
+.theme-base-agile .related-posts li a:hover {
+  color: #004D9B;
 }
 
 img.center {
@@ -75,15 +75,12 @@ img.center {
   opacity: 1;
 }
 
-/* https://gist.github.com/chsh/2341675 */
-/* looks nice, but makes images look stupid
-.post p a:after, .page a:after {
-  content: "\f08e";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  display: inline-block;
-  text-decoration: inherit;
-  font-size: 80%;
-  padding-left: 0.2em;
-}*/
+.lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.lead_small {
+  font-size: 1.1rem;
+  font-weight: 150;
+}
