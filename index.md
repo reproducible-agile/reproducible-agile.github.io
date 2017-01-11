@@ -66,13 +66,14 @@ At least one reviewer conducts an in depth review of the submission. Concrete re
 - Carsten Kessler (Department of Development and Planning, Aalborg University Copenhagen, Denmark), [@crstn](https://github.com/crstn)
 - Peter Löwe (German National Library of Science and Technology (TIB) ‒ Leibniz Information Centre for Science and Technology and University Library - Germany), [@ploewe](https://github.com/ploewe)
 - Victor Maus (International Institue for Applied Systems Analysis, Vienna, Austria), [@vwmaus](https://github.com/vwmaus)
-- Frank Ostermann (Faculty of Geo-Information Science and Earth Observation (ITC) of the University of Twente, Netherlands)
+- Frank Ostermann (Faculty of Geo-Information Science and Earth Observation (ITC) of the University of Twente, Netherlands), [@foost](https://github.com/foost)
+- Edzer Pebesma (Institute for Geoinformatics, Münster, Germany), [@edzer](https://github.com/edzer)
 - Anett Schibalski (Institute of Earth and Environmental Science, University of Potsdam, Germany), [@schibalski](https://github.com/schibalski)
 - Judith Verstegen (Institute for Geoinformatics, Münster, Germany), [@JudithVerstegen](https://github.com/JudithVerstegen)
 
 ## Organizing Committee
 
 - Daniel Nüst (ifgi), daniel.nuest@uni-muenster.de (main contact), [@nuest](https://github.com/nuest)
-- Frank Ostermann (ITC), f.o.ostermann@utwente.nl
+- Frank Ostermann (ITC), f.o.ostermann@utwente.nl, [@foost](https://github.com/foost)
 - Markus Konkol (ifgi), m.konkol@uni-muenster.de, [@MarkusKonk](https://github.com/MarkusKonk)
 - Edzer Pebesma (ifgi), edzer.pebesma@uni-muenster.de, [@edzer](https://github.com/edzer)
