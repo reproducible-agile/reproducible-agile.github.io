@@ -1,5 +1,7 @@
 # Reproducible Computational Geosciences
 
+[![Join the chat at https://gitter.im/o2r-project/agile-2017](https://badges.gitter.im/o2r-project/agile-2017.svg)](https://gitter.im/o2r-project/agile-2017?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [Go to workshop website](http://o2r.info/agile-2017/)
 
 ## Site management
