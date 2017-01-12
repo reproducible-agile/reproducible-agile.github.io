@@ -60,7 +60,7 @@ Feedback will be given in the pull request discussion. Accepted papers will be m
 
 ### Review process
 
-At least one reviewer conducts an in depth review of the submission. Concrete review guidelines [are under development](https://github.com/o2r-project/agile-2017/issues/3), as is the [review process](https://github.com/o2r-project/agile-2017/issues/2).
+At least one reviewer conducts an in depth review of the submission. The wiki contains [guidelines for reviewers](https://github.com/o2r-project/agile-2017/wiki/Guidelines-for-reviewers) and the [review process](https://github.com/o2r-project/agile-2017/wiki/Review-process).
 
 ## Programme Committee
 
