@@ -58,7 +58,7 @@ Selected papers will be invited for presentation at the workshop.
 [Fork the workshop repository](https://github.com/o2r-project/agile-2017#fork-destination-box) and create a new [Markdown](https://guides.github.com/features/mastering-markdown/) document named `first_authors_last_name.md` in the directory `submissions`. Then [create a pull request](https://github.com/o2r-project/agile-2017#fork-destination-box).
 Feedback will be given in the pull request discussion. Accepted papers will be merged and published on the website.
 
-### Review process
+### Review
 
 At least one reviewer conducts an in depth review of the submission. The wiki contains [guidelines for reviewers](https://github.com/o2r-project/agile-2017/wiki/Guidelines-for-reviewers) and the [review process](https://github.com/o2r-project/agile-2017/wiki/Review-process).
 
