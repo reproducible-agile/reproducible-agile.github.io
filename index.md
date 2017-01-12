@@ -41,9 +41,15 @@ Selected papers will be invited for presentation at the workshop.
 - Talks (10 minutes + 10 minutes discussion)
 - Discussion (60 minutes)
 
-## Schedule & presentations
+## Timeline & important dates
 
-TBA
+- **Submission deadline: _March 19 2017_**
+- Assignment of reviewers: March 22 2017
+- Reviews due: April 2 2017
+- Notification of acceptance: _April 5 2017_
+- Publish workshop agenda: May 1 2017
+- Workshop: **May 9 2017** (AGILE conference May 10 to 12)
+- Publication of report: May 31
 
 ## Submissions
 
