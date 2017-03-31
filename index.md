@@ -3,82 +3,37 @@ layout: default
 title: Home
 ---
 
-# Reproducible Computational Geosciences @ AGILE 2017
+# Reproducible Geosciences Discussion Forum @ AGILE 2017
 
-Pre-conference workshop at the [20th AGILE International Conference on Geographic Information Science](https://agile-online.org/index.php/home-2017), Wageningen, May 9 2017
+Pre-conference workshop at the [20th AGILE International Conference on Geographic Information Science](https://agile-online.org/index.php/home-2017), Wageningen, **May 9 2017** (afternoon, see [conference programme](https://agile-online.org/index.php/programme-2017/detailed-programme-2017))
+
+<div style="font-style: italic; border: 1px solid red; padding: 1em;"><span style="color: red;">UPDATE:</span> The workshop programme was updated to a discussion forum towards writing a position paper.
+This is a reaction to few submissions and the realisation the introduction of RR at AGILE requires a different approach.
+Join the discussion to prepare AGILE for the future!</div>
 
 ## About
 
-Reproducible research (RR) gains more attention each year with prominent papers, editorials
-and blog posts as journals, researchers and funders drive forward the agenda on open
-science. But still the majority of papers analyzing data, including diverse and often unique
-spatio-temporal observations, are not accompanied by complete materials (data, methods,
-complete results) to reproduce the methodology and computations, so that anyone can
-reproduce the findings.
+Reproducible research (RR) gains more attention each year with prominent papers, editorials and blog posts as journals, researchers and funders drive forward the agenda on open science.
+But still the majority of papers analysing data, including diverse and often unique spatio-temporal observations, are not accompanied by complete materials (data, code/methods, complete results) so that anyone can reproduce the findings.
+In this workshop we want to discuss in an informal setting if and how RR is relevant for the AGILE organization as well as conference.
 
-In this half-day workshop we introduce the topic in the GIScience domain with a focus on
-computational reproducibility.
+Questions to get our discussion started are:
 
-Contributions on the topics
+- How many papers at AGILE use computational methods or analyse datasets?
+- Which [AGILE member labs](https://agile-online.org/index.php/community/members) have reproducibility on their teaching agendas and practice it in their research?
+- Will the AGILE conference prevail without reproducibility studies and special credit for replications, open science, open code, open data, and RR?
 
-- lessons learned and best practices on RR, incl. previously published examples
-- reports on reproducibility studies
-- challenges of RR/open science
-- tools and workflows supporting computational RR
-- education in RR methods
-- archives and repositories
-- legal aspects of RR (privacy, licenses, terms of service)
+The workshop's goal is to create an outline for a position paper _"Reproducible Research for the future of AGILE"_ to be submitted to AGILE 2018.
 
-are welcome.
+If you are interested in putting RR on the agenda for the AGILE community we look forward to welcome your ideas at the workshop.
 
-Workshop papers (< 1000 words) must be submitted via pull request to the [workshop's GitHub repository](https://github.com/o2r-project/agile-2017), see instructions below.
-Selected papers will be invited for presentation at the workshop.
+<s>Workshop papers (< 1000 words) must be submitted via pull request to the <a href="https://github.com/o2r-project/agile-2017">workshop's GitHub repository</a>, see instructions below. Selected papers will be invited for presentation at the workshop.</s>
 
 ## Planned agenda
 
-- Introduction/Welcome
-- Invited talks (1-2, ~15 minutes each)
-- Talks (10 minutes + 10 minutes discussion)
-- Discussion (60 minutes)
-
-## Timeline & important dates
-
-- **Submission deadline: _March 19 2017_**
-- Assignment of reviewers: March 22 2017
-- Reviews due: April 2 2017
-- Notification of acceptance: _April 5 2017_
-- Publish workshop agenda: May 1 2017
-- Workshop: **May 9 2017** (AGILE conference May 10 to 12)
-- Publication of report: May 31
-
-## Submissions
-
-### How to submit
-
-[Fork the workshop repository](https://github.com/o2r-project/agile-2017#fork-destination-box) and create a new [Markdown](https://guides.github.com/features/mastering-markdown/) document named `first_authors_last_name.md` in the directory `submissions`. Then [create a pull request](https://github.com/o2r-project/agile-2017#fork-destination-box).
-
-If you have troubles working with GitHub, please get in touch with the workshop organizers or send your abstract via email to [daniel.nuest@uni-muenster.de, m.konkol@uni-muenster.de, and f.o.ostermann@utwente.nl](mailto:daniel.nuest@uni-muenster.de,m.konkol@uni-muenster.de,f.o.ostermann@utwente.nl?subject=AGILE workshop submission).
-
-Feedback will be given in the pull request discussion. Accepted papers will be merged and published on the website.
-
-### Review
-
-At least one reviewer conducts an in depth review of the submission. The wiki contains [guidelines for reviewers](https://github.com/o2r-project/agile-2017/wiki/Guidelines-for-reviewers) and the [review process](https://github.com/o2r-project/agile-2017/wiki/Review-process).
-
-## Programme Committee
-
-- Xenia van Edig (Copernicus GmbH, Germany)
-- Michael Gould (Global Education Manager, esri, Redlands, USA; Geospatial Technologies Research Group, University Jaume I, Spain), [@mdgould](https://github.com/mdgould)
-- Benedikt Gräler (52°North Initiative for Geospatial Open Source Software GmbH, Münster, Germany), [@BenGraeler](https://github.com/BenGraeler)
-- Martin Hammitzsch (GFZ German Research Centre for Geosciences, Potsdam, Germany), [@mrtnhmtz](https://github.com/mrtnhmtz)
-- Tomi Kauppinen (Aalto University School of Science, Finland)
-- Carsten Kessler (Department of Development and Planning, Aalborg University Copenhagen, Denmark), [@crstn](https://github.com/crstn)
-- Peter Löwe (German National Library of Science and Technology (TIB) ‒ Leibniz Information Centre for Science and Technology and University Library - Germany), [@ploewe](https://github.com/ploewe)
-- Victor Maus (International Institue for Applied Systems Analysis, Vienna, Austria), [@vwmaus](https://github.com/vwmaus)
-- Frank Ostermann (Faculty of Geo-Information Science and Earth Observation (ITC) of the University of Twente, Netherlands), [@foost](https://github.com/foost)
-- Edzer Pebesma (Institute for Geoinformatics, Münster, Germany), [@edzer](https://github.com/edzer)
-- Anett Schibalski (Institute of Earth and Environmental Science, University of Potsdam, Germany), [@schibalski](https://github.com/schibalski)
-- Judith Verstegen (Institute for Geoinformatics, Münster, Germany), [@JudithVerstegen](https://github.com/JudithVerstegen)
+- Introduction
+- Invited talk "Terms and Methods in Reproducible Research"
+- Discussion (90 minutes)
 
 ## Organizing Committee
 
