@@ -37,7 +37,7 @@ github:
 
 # ribbon itself by https://github.com/simonwhitaker/github-fork-ribbon-css
 ribbon:
-  show: true
+  show: false
   text: 'Submit abstract'
   url: 'https://github.com/o2r-project/agile-2017#fork-destination-box'
 
