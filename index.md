@@ -25,15 +25,18 @@ Questions to get our discussion started are:
 
 The workshop's goal is to create an outline for a position paper _"Reproducible Research for the future of AGILE"_ to be submitted to AGILE 2018.
 
-If you are interested in putting RR on the agenda for the AGILE community we look forward to welcome your ideas at the workshop.
+**If you are interested in putting RR on the agenda for the AGILE community we look forward to welcome your ideas at the workshop.**
 
 <s>Workshop papers (< 1000 words) must be submitted via pull request to the <a href="https://github.com/o2r-project/agile-2017">workshop's GitHub repository</a>, see instructions below. Selected papers will be invited for presentation at the workshop.</s>
 
 ## Planned agenda
 
 - Introduction
-- Invited talk "Terms and Methods in Reproducible Research"
-- Discussion (90 minutes)
+- Discussion & collaborative research and paper writing (90 minutes)
+
+## Participants
+
+[http://www.participants.eu/JD2/reproducible-computational-geosciences/](http://www.participants.eu/JD2/reproducible-computational-geosciences/)
 
 ## Organizing Committee
 
