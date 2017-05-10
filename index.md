@@ -21,7 +21,7 @@ The participants agreed early on to collaborate on a _position paper_ to be subm
 
 - How does a reproduction of a specific paper work?
 - What is the state of reproducibility of AGILE best papers and education in the [AGILE member labs](https://agile-online.org/index.php/community/members)?
-- What could AGILE do to encourage reproducibility and positively influence the scientific culture for the [next 20 years]()?
+- What could AGILE do to encourage reproducibility and positively influence the scientific culture for the [next 20 years](https://link.springer.com/chapter/10.1007/978-3-319-56759-4_20)?
 
 **The organizers want to thank the participants again for making the workshop a success!** The workshop's format was received well as a "hands-on discussion", and not "just another round of presentations". As for the content, the participants were happy to learn about "what's happening in reproducible research", got a "first insight into a new field", and found the bits of links/papers shared during the discussion "educational". More feedback is very welcome, please get in touch. A second edition of the workshop is of course on the agenda.
 
