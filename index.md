@@ -5,42 +5,51 @@ title: Home
 
 # Reproducible Geosciences Discussion Forum @ AGILE 2017
 
-Pre-conference workshop at the [20th AGILE International Conference on Geographic Information Science](https://agile-online.org/index.php/home-2017), Wageningen, **May 9 2017** (afternoon, see [conference programme](https://agile-online.org/index.php/programme-2017/detailed-programme-2017))
+Workshop at the [20th AGILE International Conference on Geographic Information Science](https://agile-online.org/index.php/home-2017), Wageningen
 
-<div style="font-style: italic; border: 1px solid red; padding: 1em;"><span style="color: red;">UPDATE:</span> The workshop programme was updated to a discussion forum towards writing a position paper.
-This is a reaction to few submissions and the realisation the introduction of RR at AGILE requires a different approach.
-Join the discussion to prepare AGILE for the future!</div>
+<h2><span style="font-style: italic; color: red;">UPDATE:</span> Short workshop recap and next steps</h2>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Thx! Fun, educational &amp; productive workshop today on <a href="https://twitter.com/hashtag/reproducible?src=hash">#reproducible</a> <a href="https://twitter.com/hashtag/geosciences?src=hash">#geosciences</a> at <a href="https://twitter.com/hashtag/agilewag2017?src=hash">#agilewag2017</a> <a href="https://twitter.com/hashtag/agile2017nl?src=hash">#agile2017nl</a> Report soon via <a href="https://twitter.com/o2r_project">@o2r_project</a> <a href="https://t.co/MjrWPQyoQ2">pic.twitter.com/MjrWPQyoQ2</a></p>&mdash; Daniel Nüst (@nordholmen) <a href="https://twitter.com/nordholmen/status/861966842373472256">May 9, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+A small but productive group gathered in a half-day pre-conference workshop to discuss a huge and challenging topic: _reproducible research_ (RR).
+The workshop started with a short history of and motivation for the workshop. The organizers (see below) reported on the original [call for papers with public peer](https://github.com/o2r-project/agile-2017/issues/2) [review](https://github.com/o2r-project/agile-2017/issues/3) and the realization that the topics reproducibility, computational reproducibility, replication, etc. are apparently not high on the AGILE community agenda. As a result, the workshop was re-oriented towards knowledge exchange and collaboration: learning more about the state of reproducibility at AGILE, and joining forces to contribute to AGILE with an exploration on how the conference could improve and extend on RR.
+
+After the introduction, all participants shared their experiences and understanding of RR. Then an in-depth discussion on the relevance of reproducibility for research in general and for AGILE (member labs, conference) followed. A discussion of terms (reproduction, replication, openness, ...) naturally had to be there, too, accompanied by references to most relevant meta-papers in the area and the aspects of education/skills and scientific culture.
+
+The participants agreed early on to collaborate on a _position paper_ to be submitted to next year's AGILE conference. A number of questions will lead the research and paper writing. Here are a few examples.
+
+- How does a reproduction of a specific paper work?
+- What is the state of reproducibility of AGILE best papers and education in the [AGILE member labs](https://agile-online.org/index.php/community/members)?
+- What could AGILE do to encourage reproducibility and positively influence the scientific culture for the [next 20 years]()?
+
+**The organizers want to thank the participants again for making the workshop a success!** The workshop's format was received well as a "hands-on discussion", and not "just another round of presentations". As for the content, the participants were happy to learn about "what's happening in reproducible research", got a "first insight into a new field", and found the bits of links/papers shared during the discussion "educational". More feedback is very welcome, please get in touch. A second edition of the workshop is of course on the agenda.
+
+**Next steps** for the newly formed collaboration are first enjoying a well-organized AGILE conference and asking hard questions on reproducibility during all the diverse sessions. In a few weeks, we plan to meet online and share the progress on first actions taken for the position paper.
 
 ## About
 
 Reproducible research (RR) gains more attention each year with prominent papers, editorials and blog posts as journals, researchers and funders drive forward the agenda on open science.
 But still the majority of papers analysing data, including diverse and often unique spatio-temporal observations, are not accompanied by complete materials (data, code/methods, complete results) so that anyone can reproduce the findings.
 In this workshop we want to discuss in an informal setting if and how RR is relevant for the AGILE organization as well as conference.
-
-Questions to get our discussion started are:
-
-- How many papers at AGILE use computational methods or analyse datasets?
-- Which [AGILE member labs](https://agile-online.org/index.php/community/members) have reproducibility on their teaching agendas and practice it in their research?
-- Will the AGILE conference prevail without reproducibility studies and special credit for replications, open science, open code, open data, and RR?
-
 The workshop's goal is to create an outline for a position paper _"Reproducible Research for the future of AGILE"_ to be submitted to AGILE 2018.
 
-**If you are interested in putting RR on the agenda for the AGILE community we look forward to welcome your ideas at the workshop.**
+**If you are interested in putting RR on the map for the AGILE community we look forward to welcome your ideas at the workshop or via email.**
 
-<s>Workshop papers (< 1000 words) must be submitted via pull request to the <a href="https://github.com/o2r-project/agile-2017">workshop's GitHub repository</a>, see instructions below. Selected papers will be invited for presentation at the workshop.</s>
+### Agenda
 
-## Planned agenda
+**Date & time**: May 9 2017 @ 13:30-17:00 (see [conference programme](https://agile-online.org/index.php/programme-2017/detailed-programme-2017))
 
 - Introduction
 - Discussion & collaborative research and paper writing (90 minutes)
 
-## Participants
+### Participants
 
 [http://www.participants.eu/JD2/reproducible-computational-geosciences/](http://www.participants.eu/JD2/reproducible-computational-geosciences/)
 
-## Organizing Committee
+### Organizing Committee
 
-- Daniel Nüst (ifgi), daniel.nuest@uni-muenster.de (main contact), [@nuest](https://github.com/nuest)
-- Frank Ostermann (ITC), f.o.ostermann@utwente.nl, [@foost](https://github.com/foost)
-- Markus Konkol (ifgi), m.konkol@uni-muenster.de, [@MarkusKonk](https://github.com/MarkusKonk)
-- Edzer Pebesma (ifgi), edzer.pebesma@uni-muenster.de, [@edzer](https://github.com/edzer)
+- [Daniel Nüst](https://orcid.org/0000-0002-0024-5046) (ifgi), daniel.nuest@uni-muenster.de (main contact), [@nuest](https://github.com/nuest)
+- [Frank Ostermann](https://orcid.org/0000-0002-9317-8291) (ITC), f.o.ostermann@utwente.nl, [@foost](https://github.com/foost)
+- [Markus Konkol](https://orcid.org/0000-0001-6651-0976) (ifgi), m.konkol@uni-muenster.de, [@MarkusKonk](https://github.com/MarkusKonk)
+- [Edzer Pebesma](https://orcid.org/0000-0001-8049-7069) (ifgi), edzer.pebesma@uni-muenster.de, [@edzer](https://github.com/edzer)
