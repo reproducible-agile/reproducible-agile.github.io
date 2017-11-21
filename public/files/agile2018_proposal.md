@@ -37,11 +37,13 @@ The planned agenda for the half-day workshop (4 hours in total) is as follows:
     - Python scripting with QGIS
 4. Summary & Feedback [30 min.]
 
-Participants are required to register until **May 7 2018** via [opening a GitHub issue on the workshop repository]().
+Participants are required to register until **April 22 2018** (parallel to end of early registration for conference) via [opening a GitHub issue on the workshop repository]().
 The registration must include (i) a short description of experience in the technologies of the hands-on sessions, (ii) a summary of previously conducted computational work, ideally including the actual data and code as references, (iii) motivation or plans for future computer-based research, and (iv) preferred hands-on session.
+
 In case of a high number of publications, participants may be selected based on the submitted material.
-The number of hands-on sessions depends on room availability and participants' interests.
 Participants must bring their own computers and be prepared to install software before the workshop.
+
+The number and topics of hands-on sessions depend on room availability and participants' interests and will be announced on _May 15 2018_.
 
 ## 4. Short description of the intended length (half or full day) and the format of the workshop
 
@@ -51,11 +53,12 @@ Half day workshop with a mixture of lecture, hands-on practical work, and discus
 
 This workshop is a follow-up to last year's successful introduction of reproducible research at AGILE.
 The relevance of Open Science and reproducible research has not changed!
-On try contrary, the overarching challenge to develop guidelines and feature examples for the AGILE community still prevails.
+On the contrary, the overarching challenge to develop guidelines and feature examples for the AGILE community still prevails.
 
 While the workshop format had to be adjusted last year as the submissions were too low for the then planned format, the topic was taken up during the conference in many conversations and by presenters during their talks.
-This year, the organizing committee is strengthened further and wants to keep the slow but steady pace to establish reproducible research practices at the AGILE conference.
-The workshop's hands-on approach is a complementary feature to the list of AGILE workshops and most relevant to all of AGILE's attendees, but especially for young researchers just beginning to establish their way of practicing science.
+This year, the organizing committee is strengthened further and wants to keep the steady pace to establish reproducible research practices at the AGILE conference.
+
+The workshop's hands-on approach is a complementary feature to the list of AGILE workshops and most relevant to all of AGILE's attendees, but especially valuable for early career scientists, who are just beginning to establish their way of practicing science.
 
 ## 6. What is the approximate number of expected participants?
 
