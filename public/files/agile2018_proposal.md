@@ -6,7 +6,7 @@ Reproducible Research at AGILE
 
 ## 2.1 Topic(s)
 
-Reproducible research, open science, reproducibility, software craftsmanship
+reproducible research, open science, reproducibility, software carpentry, data carpentry
 
 ## 2.2 Objective(s)
 
@@ -14,27 +14,36 @@ Reproducible research, open science, reproducibility, software craftsmanship
 
 - spreading the knowledge about reproducible research practices in AGILE member labs
 - making participants' provided analyses more reproducible
-- ...
+- introducing participants to tools/software for reproducible research
+- learning about experiences of AGILE participants with reproducibility
 
 ## 3. Abstract
 
 Reproducibility and replicability of research gains more attention each year across many domains, some of which even struggle with a "reproducibility crisis".
 However, at AGILE conferences, the topic is underrepresented.
-We have found that none of the last years candidates for best papers (short & full papers) provided sufficient information (instructions, data, and code) to be reproduced independently by a third party.
-In this workshop we would like to plant a seed in the AGILE community by introducing newcomers to the world of reproducible research and give hands-on guidance on how to increase the degree of reproducibility for their research.
+Recent research (submitted to AGILE 2017) found that none of the last years nominees for best papers (both short & full papers) provided sufficient information (i.e. instructions, data, and code) to be reproduced independently by a third party.
+In this workshop we would like to plant a seed in the AGILE community by introducing newcomers to the world of reproducible research and give hands-on guidance on how to increase the degree of reproducibility for their work.
 
-Participants are required to register beforehand via email to daniel.nuest@uni-muenster.de.
-If possible they should bring their own analysis with them, be it a laptop with their own software and workflow documentation or a storage device with data and code.
-The planned agenda for the day is as
+The planned agenda for the half-day workshop (4 hours in total) is as follows:
 
-- morning
-  - introduction to reproducible research: relevant literature, challenges, and solutions
-  - discussion: RR at AGILE 2020
-- afternoon: reproduce brought along research
+1. Introduction to reproducible research: relevant literature, challenges, and solutions (lecture) [15 min.]
+2. Reproducibility at AGILE (and its member labs) today and tomorrow (presentation, discussion) [45 min.]
+3. Hands-on reproducible research [150 mins. including breaks]
+  - Reproducible paper with R Markdown
+  - Reproducible lab notebook in Python with Jupyter
+  - Python scripting with ArcGIS
+  - Python scripting with QGIS
+4. Summary & Feedback [30 min.]
+
+Participants are required to register until **May 7 2018** via [opening a GitHub issue on the workshop repository]().
+The registration must include (i) a short description of experience in the technologies of the hands-on sessions, (ii) a summary of previously conducted computational work, ideally including the actual data and code as references, (iii) motivation or plans for future computer-based research, and (iv) preferred hands-on session.
+In case of a high number of publications, participants may be selected based on the submitted material.
+The number of hands-on sessions depends on room availability and participants' interests.
+Participants must bring their own computers and be prepared to install software before the workshop.
 
 ## 4. Short description of the intended length (half or full day) and the format of the workshop
 
-Full day workshop with a mixture of lecture and discussion in the morning, and hands-on practical workshop in the afternoon.
+Half day workshop with a mixture of lecture, hands-on practical work, and discussion.
 
 ## 5. Brief statement of the relevance of the workshop for AGILE
 
@@ -66,13 +75,16 @@ Organizing Committee: see involved persons at contributing AGILE members
 
 ## 8. Additional information about previous workshops, if held.
 
+http://o2r.info/agile-2017/
+
 ## 9. Expected resources needed
 
+- one lecture room
+- two additional break-out rooms for hands-on sessions
 - internet connection for all participants
-- digital projector
-- room for group work, ideally a large room with several movable tables
-- coffee and lunch
-- flip charts (at least 1)
+- digital projector (in all rooms)
+- coffee
+- flip charts or whiteboard, 1 per room
 
 ## 10. Other information
 
