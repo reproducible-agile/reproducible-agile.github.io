@@ -16,6 +16,8 @@ reproducible research, open science, reproducibility, software carpentry, data c
 - making participants' provided analyses more reproducible
 - introducing participants to tools/software for reproducible research
 - learning about experiences of AGILE participants with reproducibility
+- report on the workshop website (cross posted on involved organisations blogs)
+- recruiting new expertise/co-organizers from the participants for a full-day workshop at AGILE 2019
 
 ## 3. Abstract
 
@@ -62,14 +64,16 @@ The workshop's hands-on approach is a complementary feature to the list of AGILE
 ## 7. Names and e-mail addresses of the organizing member(s)
 
 Leading AGILE member (or sponsor) and contact person:
+
 Institute for Geoinformatics, University of Münster, Daniel Nüst, daniel.nuest@uni-muenster.de
 
 Contributing AGILE members (including the persons involved):
-Faculty of Geo-Information Science and Earth Observation (ITC) of the University of Twente (Frank Ostermann, Valentina Cerutti)
-Interfaculty Department of Geoinformatics – Z_GIS, University of Salzburg (Barbara Hofer)
-Institute for Geoinformatics, University of Münster (Daniel Nüst, Markus Konkol)
-OTB -Research Institute for Housing, Urban and Mobility Studies, Technical University of Delft (Rusne Sileryte)
-Department of Information Systems, University of Jaume I (Carlos Granell)
+
+- Faculty of Geo-Information Science and Earth Observation (ITC) of the University of Twente (Frank Ostermann, Valentina Cerutti)
+- Interfaculty Department of Geoinformatics – Z_GIS, University of Salzburg (Barbara Hofer)
+- Institute for Geoinformatics, University of Münster (Daniel Nüst, Markus Konkol)
+- OTB - Research Institute for Housing, Urban and Mobility Studies, Technical University of Delft (Rusne Sileryte)
+- Department of Information Systems, University of Jaume I (Carlos Granell)
 
 Organizing Committee: see involved persons at contributing AGILE members
 
