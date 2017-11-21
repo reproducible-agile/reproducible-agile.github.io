@@ -29,10 +29,10 @@ The planned agenda for the half-day workshop (4 hours in total) is as follows:
 1. Introduction to reproducible research: relevant literature, challenges, and solutions (lecture) [15 min.]
 2. Reproducibility at AGILE (and its member labs) today and tomorrow (presentation, discussion) [45 min.]
 3. Hands-on reproducible research [150 mins. including breaks]
-  - Reproducible paper with R Markdown
-  - Reproducible lab notebook in Python with Jupyter
-  - Python scripting with ArcGIS
-  - Python scripting with QGIS
+    - Reproducible paper with R Markdown
+    - Reproducible lab notebook in Python with Jupyter
+    - Python scripting with ArcGIS
+    - Python scripting with QGIS
 4. Summary & Feedback [30 min.]
 
 Participants are required to register until **May 7 2018** via [opening a GitHub issue on the workshop repository]().
