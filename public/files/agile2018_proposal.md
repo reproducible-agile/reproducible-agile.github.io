@@ -1,20 +1,19 @@
 # 1. Workshop name/title (and acronym is applicable)
 
-Reproducible Research at AGILE
+Reproducible Research Publications at AGILE (RR@AGILE)
 
 # 2. Description of the workshop by listing topic(s), objective(s) and planned outcome(s) 
 
 ## 2.1 Topic(s)
 
-reproducible research, open science, reproducibility, software carpentry, data carpentry
+reproducible research, open science, reproducibility, software carpentry, data carpentry, reproducible paper
 
 ## 2.2 Objective(s)
 
 ## 2.3 Planned outcome(s)
 
 - spreading the knowledge about reproducible research practices in AGILE member labs
-- making participants' provided analyses more reproducible
-- introducing participants to tools/software for reproducible research
+- introducing participants to tools/software for reproducible research publications
 - learning about experiences of AGILE participants with reproducibility
 - report on the workshop website (cross posted on involved organisations blogs)
 - recruiting new expertise/co-organizers from the participants for a full-day workshop at AGILE 2019
@@ -95,4 +94,5 @@ http://o2r.info/agile-2017/
 
 ## 10. Other information
 
-n/a
+The workshop potentially targets the same audience, i.e. people interested in open science and data science, as another workshop proposal on research data management.
+For people interested in both topics, it would be very welcome to schedule the workshops after each other: research data in the morning, and writing the reproducible publication in the afternoon.
