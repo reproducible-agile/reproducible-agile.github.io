@@ -36,22 +36,23 @@ Together with the instructors they create a reproducible document from text, cod
 The planned agenda for the half-day workshop (4 hours in total) is as follows:
 
 1. Introduction to reproducible research: relevant literature, challenges, and solutions (lecture) [15 min.]
-2. Reproducibility at AGILE (and its member labs) today and tomorrow (presentation) [15 min.]
+2. Reproducibility at AGILE today (presentation) [15 min.]
 3. Hands-on reproducible research [180 mins. including breaks, two break-out sessions]
     - **Goal:** Reproducing a paper with either _R_ or _Python_ code
         - Participants make first-hand experiences in trying to reproduce a prepared computational analysis from a real paper
         - Transform a "typical" publication into a reproducible document
         - Publish the analysis in a research data repository
     - **Skills:** Tools for creating reproducible documents (literate programming wit R Markdown or Jupyter Notebook), scripted geospatial workflows for GIS
-4. Summary & Feedback [30 min.]
+4. Reproducibility at AGILE tomorrow (discussion, presentation) & Feedback [30 min.]
 
 Participants are required to register until **April 22 2018** (parallel to end of early registration for conference) via [opening a GitHub issue on the workshop repository]().
-The registration must include (i) a short description of experience in R and/or Python, (ii) a summary of previously conducted computational work, ideally including references to data and code, (iii) motivation or plans for future computer-based research, and (iv) preferred hands-on session.
+The registration must include (i) a short description of experience in R/Python, (ii) a summary of previously conducted computational work, ideally including references to published papers, data or code, (iii) motivation or plans for future computer-based research, and (iv) preferred hands-on session.
 
 In case of a high number of publications, participants may be selected based on the submitted material.
 Participants must bring their own computers and be prepared to install software before the workshop.
 
-The number and topics of hands-on sessions depend on room availability and participants' interests and will be announced on _May 15 2018_.
+The number and topics of hands-on sessions depend on room availability and participants' interests.
+They will be announced on _May 15 2018_.
 
 ## 4. Short description of the intended length (half or full day) and the format of the workshop
 
