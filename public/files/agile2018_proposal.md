@@ -29,7 +29,7 @@ In this workshop, the participants learn about concrete tools and best practices
 Reproducibility and replicability of research gains more attention each year across many domains, some of which even struggle with a "reproducibility crisis".
 However, at AGILE conferences, the topic is underrepresented.
 Recent research (submitted to AGILE 2017) found that none of the last years nominees for best papers (both short & full papers) provided sufficient information (i.e. instructions, data, and code) to be reproduced independently by a third party.
-This workshop introduces newcomers to reproducible research and gives hands-on guidance on how to increase the degree of reproducibility for their own work.
+This workshop introduces interested scientists and developers to reproducible research and gives hands-on guidance on how to increase the degree of reproducibility for their own work.
 Participants explore the practical principles of reproducible papers by reproducing a provided real-world publication.
 Together with the instructors they create a reproducible document from text, code, and data of a scholarly publication and publish it in a data repository.
 
@@ -46,7 +46,9 @@ The planned agenda for the half-day workshop (4 hours in total) is as follows:
 4. Reproducibility at AGILE tomorrow (discussion, presentation) & Feedback [30 min.]
 
 Participants are required to register until **April 22 2018** (parallel to end of early registration for conference) via [opening a GitHub issue on the workshop repository]().
-The registration must include (i) a short description of experience in R/Python, (ii) a summary of previously conducted computational work, ideally including references to published papers, data or code, (iii) motivation or plans for future computer-based research, and (iv) preferred hands-on session.
+
+The registration must include (i) preferred hands-on session (_R_ or _Python_), (ii) a short description of experience in R and/or Python, (iii) a summary of computational work, if available with references to published papers, data or code, ans (iv) plans for future computer-based research.
+Basic skills, ideally with practical experiences as part of a research project, in the selected programming language are required to participate in the workshop - please get in touch if you are unsure!
 
 In case of a high number of publications, participants may be selected based on the submitted material.
 Participants must bring their own computers and be prepared to install software before the workshop.
