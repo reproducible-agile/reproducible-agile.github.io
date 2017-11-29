@@ -48,3 +48,5 @@ node_modules
 Gemfile.lock
 *.pstore
 .vscode
+
+*.docx
