@@ -45,7 +45,7 @@ The planned agenda for the half-day workshop (4 hours in total) is as follows:
     - **Skills:** Tools for creating reproducible documents (literate programming wit R Markdown or Jupyter Notebook), scripted geospatial workflows for GIS
 4. Reproducibility at AGILE tomorrow (discussion, presentation) & Feedback [30 min.]
 
-Participants are required to register until **April 22 2018** (parallel to end of early registration for conference) via [opening a GitHub issue on the workshop repository]().
+Participants are required to register until **April 22 2018** (parallel to end of early registration for conference) via [creating a new issue](https://github.com/o2r-project/reproducible-agile/issues/new) on the [workshop repository on GitHub](https://github.com/o2r-project/reproducible-agile) [both links to be created after acceptance].
 
 The registration must include (i) preferred hands-on session (_R_ or _Python_), (ii) a short description of experience in R and/or Python, (iii) a summary of computational work, if available with references to published papers, data or code, ans (iv) plans for future computer-based research.
 Basic skills, ideally with practical experiences as part of a research project, in the selected programming language are required to participate in the workshop - please get in touch if you are unsure!
