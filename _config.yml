@@ -8,11 +8,11 @@ permalink:        /:year/:month/:day/:title/
 #relative_permalinks: true
 
 # Setup
-title: 'Reproducible Geosciences Discussion Forum @ AGILE 2017'
-tagline: 'Reproducible Geosciences Discussion Forum'
-description: 'Workshop at the <a href="https://agile-online.org/index.php/home-2017" title="conference website">20th AGILE International Conference on Geographic Information Science</a><br />Wageningen, May 9 2017'
-url: http://o2r.info/agile-2017/
-baseurl: /agile-2017/
+title: 'Reproducible Research @ AGILE'
+tagline: 'Reproducible Research @ AGILE'
+description: 'Workshop series at the <a href="https://agile-online.org/index.php/conference/" title="conference websites">AGILE International Conference on Geographic Information Science</a>'
+url: http://o2r.info/reproducible-agile
+baseurl: /reproducible-agile/
 
 keywords:
   - open access
@@ -28,12 +28,12 @@ keywords:
 
 author:
   name: 'workshop organization committee'
-  url: http://o2r.info/agile-2017/
+  url: http://o2r.info/reproducible-agile/
 
-exclude: [README.md]
+exclude: [README.md, Gemfile, Gemfile.lock, Makefile]
 
 github:
-  repo: https://github.com/o2r-project/agile-2017
+  repo: https://github.com/o2r-project/reproducible-agile/
 
 # ribbon itself by https://github.com/simonwhitaker/github-fork-ribbon-css
 ribbon:
@@ -41,4 +41,5 @@ ribbon:
   text: 'Submit abstract'
   url: 'https://github.com/o2r-project/agile-2017#fork-destination-box'
 
-#gems:
+gems:
+  - jekyll-sitemap

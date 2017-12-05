@@ -1,2 +1,7 @@
-default:
-	bundle exec jekyll serve
+default: serve
+
+serve:
+	bundle exec jekyll serve --force_polling
+
+clean:
+	bundle exec jekyll clean

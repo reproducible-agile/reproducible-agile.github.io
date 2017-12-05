@@ -4,25 +4,14 @@
       <!--<a href="{{ site.baseurl }}"></a>-->
       <p class="lead">{{ site.tagline }}</p>
       <p class="lead_small">{{ site.description }}</p>
-      <a href="https://agile-online.org/index.php/home-2017" title="conference website"><img alt="AGILE logo" class="center" src="{{site.baseurl}}public/images/AGILE-logo.png" style="margin-bottom: 1em;" /></a>
+      <a href="https://agile-online.org/index.php/conference/" title="conference website"><img alt="AGILE logo" class="center" src="{{site.baseurl}}public/images/AGILE-logo.png" style="margin-bottom: 1em;" /></a>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
-
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% unless node.exclude_from_nav %}
-          {% if node.title != null %}
-            {% if node.layout == "page" %}
-              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-            {% endif %}
-          {% endif %}
-        {% endunless %}
-      {% endfor %}
-
+      <!-- <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a> -->
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">2018</a>
+      <a class="sidebar-nav-item{% if page.url contains '2017' %} active{% endif %}" href="{{ site.baseurl }}2017">2017</a>
       <a class="sidebar-nav-item" href="{{ site.github.repo }}"><i class="fa fa-github" style="margin-right: 0.3em;" aria-hidden="true"></i>GitHub</a>
-
     </nav>
 
     <p class="small">&copy; {{ site.time | date: '%Y' }} {{ site.author.name}}.<br />
