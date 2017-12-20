@@ -40,19 +40,20 @@ The planned agenda for the half-day workshop (4 hours in total) is as follows:
 
 ## Registration
 
-Participants are required to **register until April 22 2018** (parallel to end of early registration for conference) via [creating a new issue](https://github.com/o2r-project/reproducible-agile/issues/new) on the [workshop repository on GitHub](https://github.com/o2r-project/reproducible-agile) [both links to be created after acceptance].
+Participants are required to **register until April 22 2018** on the AGILE conference website (also the early registration deadline for conference).
+In addition participants must submit some information to the [workshop repository on GitHub](https://github.com/o2r-project/reproducible-agile) by [creating a new issue](https://github.com/o2r-project/reproducible-agile/issues/new).
 
-The registration must include
+The issue must include
 
 1. preferred hands-on session (_R_ or _Python_),
 1. a short description of experience in R and/or Python
 1. a summary of computational work, if available with references to published papers, data or code, and
 1. plans for future computer-based research.
 
-Basic skills, ideally with practical experiences as part of a research project, in the selected programming language are required to participate in the workshop - please get in touch if you are unsure!
+Basic skills in the selected programming language are required to participate in the workshop (e.g. practical experiences as part of a research project) - please get in touch if you are unsure!
 
 In case of a high number of publications, participants may be selected based on the submitted material.
-Participants must bring their own computers and be prepared to install software before the workshop.
+Participants must bring their own computers and be prepared to install software _before and at_ the workshop.
 
 The number and topics of hands-on sessions depend on room availability and participants' interests.
 They will be announced on _May 15 2018_.
