@@ -66,4 +66,4 @@ They will be announced on _May 15 2018_.
 - [Barbara Hofer](https://orcid.org/0000-0001-7078-3766) (Z_GIS)
 - [Carlos Granell](https://orcid.org/0000-0003-1004-9695) (Jaume I)
 - [Valentina Cerutti](https://orcid.org/0000-0002-9612-1581) (ITC)
-- [Rusne Sileryte](https://orcid.org/0000-0002-8245-3016) (OTB, TU Delft)
+- [Rusne Sileryte](https://orcid.org/0000-0002-8245-3016) (TU Delft)
