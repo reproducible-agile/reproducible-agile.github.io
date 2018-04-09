@@ -29,7 +29,9 @@ Together with the instructors they create a reproducible document from text, cod
 The planned agenda for the half-day workshop (4 hours in total) is as follows:
 
 1. Introduction to reproducible research: relevant literature, challenges, and solutions (lecture) [15 min.]
-2. Reproducibility at AGILE today (presentation) [15 min.]
+2. Reproducibility at AGILE today (presentation) [15 min.]<br />
+Take a look at this [recent pre-print](https://doi.org/10.7287/peerj.preprints.26561v1) if you want to learn more:
+[![](public/images/peerj-preprint-agile-rr.png)](https://doi.org/10.7287/peerj.preprints.26561v1)
 3. Hands-on reproducible research [180 mins. including breaks, two break-out sessions]
     - **Goal:** Reproducing a paper with either _R_ or _Python_ code
         - Participants make first-hand experiences in trying to reproduce a prepared computational analysis from a real paper
