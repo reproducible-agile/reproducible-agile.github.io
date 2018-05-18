@@ -42,8 +42,9 @@ Take a look at this [recent pre-print](https://doi.org/10.7287/peerj.preprints.2
 
 ## Registration
 
-Participants are required to **register until April 22 2018** on the AGILE conference website (also the early registration deadline for conference).
-In addition participants must submit some information to the [workshop repository on GitHub](https://github.com/o2r-project/reproducible-agile) by [creating a new issue](https://github.com/o2r-project/reproducible-agile/issues/new).
+Participants are required to on the AGILE conference website.
+
+In addition participants must submit some information to the [workshop repository on GitHub](https://github.com/o2r-project/reproducible-agile) by [creating a new issue](https://github.com/o2r-project/reproducible-agile/issues/new) **until May 27 2018**.
 
 The issue must include
 
