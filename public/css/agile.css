@@ -84,3 +84,24 @@ img.center {
   font-size: 1.1rem;
   font-weight: 150;
 }
+
+/* fonts css based on https://google-webfonts-helper.herokuapp.com */
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+       url('{{ site.baseurl }}public/fonts/source-sans-pro-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('{{ site.baseurl }}public/fonts/source-sans-pro-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-700 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+       url('{{ site.baseurl }}public/fonts/source-sans-pro-v11-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('{{ site.baseurl }}public/fonts/source-sans-pro-v11-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

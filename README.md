@@ -23,3 +23,13 @@ A generic "Fork me" ribbon has been added and can be configured (text, link) in 
 ### Exclude pages from menu
 
 If you do not want a page to appear in the left hand side menu, include the parameter `exclude_from_nav: true` in the page's frontmatter.
+
+### Privacy
+
+External CDN links were replaced with local copies as follows:
+
+- `https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js` saved to `public/js/`
+- `https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css` saved to `public/css/` (same for IE9 variant `.ie.min.css`)
+
+Google Fonts stored locally using https://google-webfonts-helper.herokuapp.com.
+Fonte Awesome manually downloaded from https://fontawesome.com/v4.7.0/.
