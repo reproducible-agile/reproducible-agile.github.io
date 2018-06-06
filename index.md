@@ -26,7 +26,7 @@ Together with the instructors they create a reproducible document from text, cod
 
 ## Agenda
 
-The workshop takes place in room **Flygeln (Öresund)**, a seminar room on the 1st floor of [Geocentrum 1](https://agile-online.org/practical-and-local-information-2018/venues-and-social-events-2018).
+The workshop takes place in room **Flygeln (Öresund)**, a seminar room on the 1st floor of [Geocentrum 1](https://agile-online.org/practical-and-local-information-2018/venues-and-social-events-2018), on Tuesday June 12 at **14:30** CEST.
 
 The planned agenda for the half-day workshop (4 hours in total) is as follows:
 
