@@ -16,6 +16,10 @@ keywords:
 
 Workshop at the [21st AGILE International Conference on Geographic Information Science](http://agile-online.org/index.php/conference/conference-2018), Lund, Sweden
 
+**Find the material at [http://o2r.info/reproducible-agile/2018/](http://o2r.info/reproducible-agile/2018/)**
+
+## About
+
 Reproducibility and replicability of research gains more attention each year across many domains, some of which even struggle with a "reproducibility crisis".
 However, at AGILE conferences, the topic is underrepresented.
 Recent research (submitted to AGILE 2017) found that none of the last years nominees for best papers (both short & full papers) provided sufficient information (i.e. instructions, data, and code) to be reproduced independently by a third party.
@@ -28,13 +32,13 @@ Together with the instructors they create a reproducible document from text, cod
 
 The workshop takes place in room **Flygeln (Öresund)**, a seminar room on the 1st floor of [Geocentrum 1](https://agile-online.org/practical-and-local-information-2018/venues-and-social-events-2018), on Tuesday June 12 at **14:30** CEST.
 
-The planned agenda for the half-day workshop (4 hours in total) is as follows:
+The planned agenda for the half-day workshop (3 hours in total) is as follows:
 
 1. Introduction to reproducible research: relevant literature, challenges, and solutions (lecture) [15 min.]
 2. Reproducibility at AGILE today (presentation) [15 min.]<br />
 Take a look at this [recent pre-print](https://doi.org/10.7287/peerj.preprints.26561v1) if you want to learn more:
 [![](public/images/peerj-preprint-agile-rr.png)](https://doi.org/10.7287/peerj.preprints.26561v1)
-3. Hands-on reproducible research [180 mins. including breaks, two break-out sessions]
+3. Hands-on reproducible research [120 mins. including breaks, two break-out sessions]
     - **Goal:** Reproducing a paper with either _R_ or _Python_ code
         - Participants make first-hand experiences in trying to reproduce a prepared computational analysis from a real paper
         - Transform a "typical" publication into a reproducible document
