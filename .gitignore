@@ -50,3 +50,9 @@ Gemfile.lock
 .vscode
 
 *.docx
+
+public/full_paper/
+
+public/poster/
+
+public/short_paper/

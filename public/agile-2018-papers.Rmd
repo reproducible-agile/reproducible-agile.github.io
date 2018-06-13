@@ -1,0 +1,380 @@
+---
+title: 'Text analysis of accepted papers and posters at AGILE conference 2018, Lund, Sweden'
+author: "Daniel Nüst"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: yes
+---
+
+This document is an exploratory analysis of all accepted short papers, full papers, and posters at the [AGILE conference 2018](https://agile-online.org/conference-2018), in Lund, Sweden - _"Geospatial Technologies for All"_.
+
+![](https://agile-online.org/images/conference_2018/images/slogan-agile18-7.jpg)
+
+The analysis is based on the work published in _"Reproducible research and GIScience: an evaluation using AGILE conference papers"_ (see [preprint](https://peerj.com/preprints/26561/) and [code repository](https://github.com/nuest/reproducible-research-and-giscience)).
+You can see the source code of the analysis in the source R Markdown file [`agile-2018-papers.Rmd`](agile-2018-papers.Rmd).
+
+```{r load_libraries, message=FALSE, warning=FALSE, include=FALSE}
+library("pdftools")
+library("stringr")
+library("tidyverse")
+library("tidytext")
+library("wordcloud")
+library("RColorBrewer")
+library("grid")
+library("gridBase")
+library("gridExtra")
+library("here")
+library("kableExtra")
+library("quanteda")
+```
+
+## Data preparation
+
+The PDFs are read in from three seperate directories.
+The full papers are not openly available.
+The short papers and posters can be downloaded from the [conference website](https://agile-online.org/conference-2018/programme-2018/accepted-papers-and-posters-2018).
+
+The following table gives the numbers of used documents split up by type.
+
+```{r load_files, echo=FALSE}
+fp_path <- "full_paper"
+sp_path <- "short_paper"
+po_path <- "poster"
+
+fp_files <- dir(path = here::here(fp_path), pattern = ".pdf$", full.names = TRUE)
+sp_files <- dir(path = here::here(sp_path), pattern = ".pdf$", full.names = TRUE)
+po_files <- dir(path = here::here(po_path), pattern = ".pdf$", full.names = TRUE)
+
+id_from_path <- function(pre, path) {
+  name <- basename(path)
+  name <- sapply(X = name, FUN = str_replace_all, pattern = "[_.-]|pdf", replacement = "")
+  name <- str_replace(name, "1010072F978331978208", "") # remove common part of filename
+  paste0(pre, "_", name)
+}
+
+fp_data <- tibble(id = id_from_path(pre = "fp", path = fp_files),
+                  path = fp_files,
+                  type = "full")
+sp_data <- tibble(id = paste0("sp_", str_extract(basename(sp_files), "[0-9]+")),
+                  path = sp_files,
+                  type = "short")
+po_data <- tibble(id = paste0("po_", str_extract(basename(po_files), "[0-9]+")),
+                  path = po_files,
+                  type = "poster")
+all_files <- bind_rows(fp_data, sp_data, po_data) %>%
+  mutate(type = as.factor(type))
+
+all_files %>%
+  group_by(type) %>%
+  summarise(count = n()) %>%
+  kable() %>%
+  kable_styling(full_width = F)
+```
+
+The text is extracted from PDFs and it is processed to create a [tidy](https://www.jstatsoft.org/article/view/v059i10) data structure without [stop words](https://en.wikipedia.org/wiki/Stop_words).
+The stop words include specific words, such as `lund`, which is included in the page header, abbreviations, and terms particular to scientific articles, such as `figure`.
+
+```{r tidy_data, include=FALSE}
+texts <- lapply(all_files$path, pdf_text)
+texts <- unlist(lapply(texts, str_c, collapse = TRUE))
+infos <- lapply(all_files$path, pdf_info)
+
+tidy_texts <- tibble(id = all_files$id,
+                     path = all_files$path,
+                     type = all_files$type,
+                     text = texts,
+                     pages = map_chr(infos, function(info) {info$pages}))
+
+# create a table of all words
+all_words <- tidy_texts %>%
+  select(id,
+         type,
+         text) %>%
+  unnest_tokens(word, text)
+
+# remove stop words and remove numbers
+my_stop_words <- tibble(
+  word = c(
+    "et",
+    "al",
+    "fig",
+    "e.g",
+    "i.e",
+    "http",
+    "ing",
+    "pp",
+    "figure",
+    "based",
+    "lund",
+    "university",
+    "table"
+  ),
+  lexicon = "agile"
+)
+
+all_stop_words <- stop_words %>%
+  bind_rows(my_stop_words)
+suppressWarnings({
+  no_numbers <- all_words %>%
+    filter(is.na(as.numeric(word)))
+})
+
+no_stop_words <- no_numbers %>%
+  anti_join(all_stop_words, by = "word")
+
+total_words = nrow(all_words)
+after_cleanup = nrow(no_stop_words)
+```
+
+About `r round(after_cleanup/total_words * 100)`&nbsp;% of the words are considered stop words.
+
+The following tables shows how many non-stop words each document has, sorted by number of non-stop words.
+The `id` is built from the file name plus a prefix:
+for full papers, it is the significant part (the last 3 numbers) of the DOI and the prefix `fp_`;
+for short papers and posters, it is the submission number included in the file name and the prefixes `sp_` and `po_` respectively.
+
+```{r stop_words, echo=FALSE, message=FALSE, warning=FALSE}
+nsw_per_doc <- no_stop_words %>%
+  group_by(id, type) %>%
+  summarise(words = n()) %>%
+  arrange(desc(words)) %>%
+  rename(`non-stop words` = words)
+
+nsw_per_doc %>%
+  bind_rows(tibble(id = "Total", type = "", `non-stop words` = sum(nsw_per_doc$`non-stop words`))) %>%
+  kable() %>%
+  kable_styling("striped", full_width = FALSE) %>%
+  row_spec(nrow(nsw_per_doc) + 1, bold = TRUE) %>%
+  scroll_box(height = "240px")
+```
+
+Summary statistics of non-stop words of all documents:
+
+```{r summary_nsw, echo=FALSE}
+options(knitr.kable.NA = '')
+summary(nsw_per_doc) %>% kable() %>%
+  kable_styling("striped", full_width = F)
+```
+
+## Word clouds and top words
+
+```{r cloud_and_top_words, include=FALSE}
+countPapersUsingWord <- function(the_word) {
+  sapply(the_word, function(w) {
+    no_stop_words %>%
+      filter(word == w) %>%
+      group_by(id) %>%
+      count %>%
+      nrow
+  })
+}
+
+top_words <- no_stop_words %>%
+  group_by(word) %>%
+  tally %>%
+  arrange(desc(n)) %>%
+  head(20) %>%
+  mutate(`publ. w/ word` = countPapersUsingWord(word)) %>%
+  add_column(place = c(1:nrow(.)), .before = 0)
+
+set.seed(21) # 21st AGILE!
+minimum_occurence <- 100 # chosen manually
+
+cloud_words <- no_stop_words %>%
+  group_by(word) %>%
+  tally %>%
+  filter(n >= minimum_occurence) %>%
+  arrange(desc(n))
+```
+
+The following word cloud is based on `r length(unique(cloud_words$word))` unique words occuring each at least `r minimum_occurence` times, all in all occuring `r sum(cloud_words$n)` times which comprises `r round(sum(cloud_words$n)/ nrow(no_stop_words) * 100)`&nbsp;% of non-stop words.
+
+```{r wordcloud_and_table_figure, echo=FALSE, dpi=300}
+def.par <- par(no.readonly = TRUE)
+par(mar = rep(0,4))
+nf <- layout(mat = matrix(data = c(1,2,3,4), nrow = 2, ncol = 2, byrow = TRUE),
+       widths = c(lcm(8),lcm(8)),
+       heights = c(lcm(1),lcm(11)))
+#layout.show(nf)
+plot.new()
+text(0.5, 0.8, "Word cloud of all AGILE 2018 submissions", font = 2)
+text(0.5, 0.2, paste0("(", length(fp_files), " full papers, ",
+                     length(sp_files), " short papers, ",
+                     length(po_files), " posters)"), font = 1)
+plot.new()
+text(0.5, 0.5, "Top words of all AGILE 2018 submissions", font = 2)
+
+suppressWarnings(
+  wordcloud(cloud_words$word, cloud_words$n,
+            max.words = Inf,
+            random.order = FALSE,
+            fixed.asp = FALSE,
+            rot.per = 0,
+            color = brewer.pal(8,"Dark2"))
+)
+
+frame() # thx to https://stackoverflow.com/a/25194694/261210
+vps <- baseViewports()
+pushViewport(vps$inner, vps$figure, vps$plot)
+grid.table(as.matrix(top_words),
+           theme = ttheme_minimal(base_size = 11,
+                                  padding = unit(c(10,5), "pt"))
+           )
+popViewport(3)
+par(def.par)
+```
+
+For the following word cloud, the word stems were extracted based on a stemming algorithm from package [`quanteda`](https://cran.r-project.org/package=quanteda).
+
+```{r top_wordstem, include=FALSE}
+wordstems <- no_stop_words %>%
+  mutate(wordstem = quanteda::char_wordstem(no_stop_words$word))
+
+countPapersUsingWordstem <- function(the_word) {
+  sapply(the_word, function(w) {
+    wordstems %>%
+      filter(wordstem == w) %>%
+      group_by(id) %>%
+      count %>%
+      nrow
+  })
+}
+
+top_wordstems <- wordstems %>%
+  group_by(wordstem) %>%
+  tally %>%
+  arrange(desc(n)) %>%
+  head(20) %>%
+  mutate(`publ. w/ wordstem` = countPapersUsingWordstem(wordstem)) %>%
+  add_column(place = c(1:nrow(.)), .before = 0)
+```
+
+```{r wordstemcloud, dpi=300, echo=FALSE}
+cloud_wordstems <- wordstems %>%
+  group_by(wordstem) %>%
+  tally %>%
+  filter(n >= minimum_occurence) %>%
+  arrange(desc(n))
+
+def.par <- par(no.readonly = TRUE)
+par(mar = rep(0,4))
+nf2 <- layout(mat = matrix(data = c(1,2,3,4), nrow = 2, ncol = 2, byrow = TRUE),
+       widths = c(lcm(8),lcm(8)),
+       heights = c(lcm(1),lcm(11)))
+plot.new()
+text(0.5, 0.8, "Wordstem cloud of all AGILE 2018 submissions", font = 2)
+text(0.5, 0.2, paste0("(", length(fp_files), " full papers, ",
+                     length(sp_files), " short papers, ",
+                     length(po_files), " posters)"), font = 1)
+plot.new()
+text(0.5, 0.5, "Top wordstems of all AGILE 2018 submissions", font = 2)
+
+suppressWarnings(
+  wordcloud(cloud_wordstems$wordstem, cloud_wordstems$n,
+            max.words = Inf,
+            random.order = FALSE,
+            fixed.asp = FALSE,
+            rot.per = 0,
+            color = brewer.pal(8,"Dark2"))
+)
+
+frame() # thx to https://stackoverflow.com/a/25194694/261210
+vps <- baseViewports()
+pushViewport(vps$inner, vps$figure, vps$plot)
+grid.table(as.matrix(top_wordstems),
+           theme = ttheme_minimal(base_size = 11,
+                                  padding = unit(c(10,5), "pt"))
+           )
+popViewport(3)
+par(def.par)
+```
+
+## Reproducible research-related keywords in AGILE publications
+
+The following tables lists how often terms related to reproducible research appear in each document.
+The detection matches full words using regex option `\b`.
+
+- reproduc (`reproduc.*`, reproducibility, reproducible, reproduce, reproduction)
+- replic (`replicat.*`, i.e. replication, replicate)
+- repeatab (`repeatab.*`, i.e. repeatability, repeatable)
+- software
+- (pseudo) code/script(s) [column name _code_]
+- algorithm (`algorithm.*`, i.e. algorithms, algorithmic)
+- process (`process.*`, i.e. processing, processes, preprocessing)
+- data (`data.*`, i.e. dataset(s), database(s))
+- result(s) (`results?`)
+- repository(ies) (`repositor(y|ies)`)
+
+```{r keywords_per_paper, echo=FALSE}
+tidy_texts_lower <- str_to_lower(tidy_texts$text)
+word_counts <- tibble(
+  id = tidy_texts$id,
+  type = tidy_texts$type,
+  `reproduc..` = str_count(tidy_texts_lower, "\\breproduc.*\\b"),
+  `replic..` = str_count(tidy_texts_lower, "\\breplicat.*\\b"),
+  `repeatab..` = str_count(tidy_texts_lower, "\\brepeatab.*\\b"),
+  `code` = str_count(tidy_texts_lower,
+    "(\\bcode\\b|\\bscript.*\\b|\\bpseudo\ code\\b)"),
+  software = str_count(tidy_texts_lower, "\\bsoftware\\b"),
+  `algorithm(s)` = str_count(tidy_texts_lower, "\\balgorithm.*\\b"),
+  `(pre)process..` = str_count(tidy_texts_lower, 
+                "(\\bprocess.*\\b|\\bpreprocess.*\\b|\\bpre-process.*\\b)"),
+  `data.*` = str_count(tidy_texts_lower, "\\bdata.*\\b"),
+  `result(s)` = str_count(tidy_texts_lower, "\\bresults?\\b"),
+  `repository/ies` = str_count(tidy_texts_lower, "\\brepositor(y|ies)\\b")
+)
+
+# https://stackoverflow.com/a/32827260/261210
+sumColsInARow <- function(df, list_of_cols, new_col) {
+  df %>% 
+    mutate_(.dots = ~Reduce(`+`, .[list_of_cols])) %>% 
+    setNames(c(names(df), new_col))
+}
+
+word_counts_sums <- sumColsInARow(
+  word_counts, 
+  names(word_counts)[!(names(word_counts) %in% c("id", "type"))], "all") %>%
+  arrange(desc(all))
+
+# TODO load paper names and use them instead of identifiers
+
+word_counts_sums_total <- word_counts_sums %>% 
+  summarise_if(is.numeric, funs(sum)) %>%
+  add_column(id = "Total", type = "", .before = 0)
+word_counts_sums <- rbind(word_counts_sums, word_counts_sums_total)
+
+extra_headers <- seq(20,120,20)
+for (r in extra_headers) {
+  word_counts_sums <- add_row(.data = word_counts_sums,
+          id = "id", type = "type", `reproduc..` = "reproduc..", `replic..` = "replic..",
+          `repeatab..` = "repeatab..", `code` = "code", `software` = "software",
+          `algorithm(s)` = "algorithm(s)", `(pre)process..` = "(pre)process..",
+          `data.*` = "data.*", `result(s)` = "result(s)", `repository/ies` = "repository/ies",
+          `all` = "all", .after = r)
+}
+
+word_counts_sums %>%
+  kable() %>%
+  kable_styling("striped", font_size = 12, bootstrap_options = "condensed")  %>%
+  row_spec(0, font_size = "x-small", bold = T)  %>%
+  row_spec(nrow(word_counts_sums), bold = T) %>%
+  row_spec(row = extra_headers + 1, bold = T)
+```
+
+## License & Metadata
+
+This document is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+All contained code is licensed under the [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/).
+
+**Runtime environment description:**
+
+```{r session_info}
+devtools::session_info(include_base = TRUE)
+```
+
+<script>
+  $(".toggle").click(function() {
+    $(this).toggleClass("open");
+  });
+</script>
