@@ -8,8 +8,8 @@
     </div>
 
     <nav class="sidebar-nav">
-      <!-- <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a> -->
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">2018</a>
+      <a class="sidebar-nav-item{% unless page.url contains '/20' %} active{% endunless %}" href="{{ site.baseurl }}">Home</a>
+      <a class="sidebar-nav-item{% if page.url contains '2018' %} active{% endif %}" href="{{ site.baseurl }}2018">2018</a>
       <a class="sidebar-nav-item{% if page.url contains '2017' %} active{% endif %}" href="{{ site.baseurl }}2017">2017</a>
       <a class="sidebar-nav-item" href="{{ site.github.repo }}"><i class="fa fa-github" style="margin-right: 0.3em;" aria-hidden="true"></i>GitHub</a>
     </nav>

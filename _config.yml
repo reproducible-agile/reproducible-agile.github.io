@@ -8,7 +8,7 @@ permalink:        /:year/:month/:day/:title/
 #relative_permalinks: true
 
 # Setup
-title: 'Reproducible Research @ AGILE'
+title: 'Reproducible Research Workshops at AGILE'
 tagline: 'Reproducible Research @ AGILE'
 description: 'Workshop series at the <a href="https://agile-online.org/index.php/conference/" title="conference websites">AGILE International Conference on Geographic Information Science</a>'
 url: http://o2r.info/reproducible-agile
