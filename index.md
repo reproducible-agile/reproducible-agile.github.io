@@ -23,7 +23,8 @@ This website is home of workshops on the topic of [Reproducible Research](https:
 
 Reproducibility and replicability of research gains more attention each year across many domains, some of which even struggle with a "reproducibility crisis".
 However, at AGILE conferences, the topic is underrepresented.
-Recent research found that none of the last years nominees for best papers (both short & full papers) provided sufficient information (i.e. instructions, data, and code) to be reproduced independently by a third party. Read more at [https://peerj.com/preprints/26561/](https://peerj.com/preprints/26561/).
+Recent research found that none of the last years nominees for best papers (both short & full papers) provided sufficient information (i.e. instructions, data, and code) to be reproduced independently by a third party.
+Read more about the state of reproducibility at AGILE and what can be done about in in the article _**"Reproducible research and GIScience: an evaluation using AGILE conference papers"**_ at [https://doi.org/10.7717/peerj.5072](https://doi.org/10.7717/peerj.5072).
 
 The workshops are organised by a group of Open Science and Reproducible Research enthusiasts.
 They introduce interested scientists and developers to the concepts of reproducible research, raise awareness of challenges around computational reproducibility in science within the AGILE community, and give hands-on guidance on how to increase the degree of reproducibility for the participant's own work.
