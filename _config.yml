@@ -11,7 +11,7 @@ permalink:        /:year/:month/:day/:title/
 title: 'Reproducible Research Workshops at AGILE'
 tagline: 'Reproducible Research @ AGILE'
 description: 'Workshop series at the <a href="https://agile-online.org/index.php/conference/" title="conference websites">AGILE International Conference on Geographic Information Science</a>'
-url: http://o2r.info/reproducible-agile
+url: https://o2r.info/reproducible-agile
 baseurl: /reproducible-agile/
 
 keywords:
@@ -28,7 +28,7 @@ keywords:
 
 author:
   name: 'workshop organization committee'
-  url: http://o2r.info/reproducible-agile/
+  url: https://o2r.info/reproducible-agile/
 
 exclude: [README.md, Gemfile, Gemfile.lock, Makefile]
 
