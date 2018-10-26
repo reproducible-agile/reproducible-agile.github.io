@@ -14,10 +14,11 @@ keywords:
 
 # Reproducible Research @ AGILE
 
-This website is home of workshops on the topic of [Reproducible Research](https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research) held at the [Association of Geographic Information Laboratories in Europe's](https://agile-online.org/) (AGILE) [annual conference series](https://agile-online.org/past-conferences-and-proceedings).
+This website is home of workshops and an [AGILE INITIATIVE](https://agile-online.org/funding-initiatives) on the topic of [Reproducible Research](https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research) in connection with the [Association of Geographic Information Laboratories in Europe's](https://agile-online.org/) (AGILE) [annual conference series](https://agile-online.org/past-conferences-and-proceedings).
 
-- [Reproducible Research Publications @ AGILE 2018](2018)
-- [Reproducible Geosciences Discussion Forum @ AGILE 2017](2017)
+- **[Reproducible Publications at AGILE Conferences](initiative)** (initiative, 2018-2019)
+- ["Reproducible Research Publications"](2018) (workshop, 2018)
+- ["Reproducible Geosciences Discussion Forum"](2017) (workshop, 2017)
 
 ## About
 

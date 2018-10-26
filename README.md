@@ -9,6 +9,9 @@
 The design is based on [Hyde](https://github.com/poole/hyde) by Mark Otto.
 
 ```bash
+# install required software
+# 
+
 bundle exec jekyll serve # build the site
 ```
 
@@ -32,4 +35,4 @@ External CDN links were replaced with local copies as follows:
 - `https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css` saved to `public/css/` (same for IE9 variant `.ie.min.css`)
 
 Google Fonts stored locally using https://google-webfonts-helper.herokuapp.com.
-Fonte Awesome manually downloaded from https://fontawesome.com/v4.7.0/.
+Font Awesome manually downloaded from https://fontawesome.com/v4.7.0/.
