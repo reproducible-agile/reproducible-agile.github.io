@@ -12,7 +12,7 @@ keywords:
 
 # Reproducible Publications at AGILE Conferences
 
-The AGILE council generously supports an [initiative](https://agile-online.org/funding-initiatives) for development of new guidelines for AGILE conference submissions to improve reproducibility.
+The AGILE council [generously supports](https://agile-online.org/agile-actions/current-initiatives/reproducible-publications-at-agile-conferences) an [initiative](https://agile-online.org/funding-initiatives) for development of new guidelines for AGILE conference submissions to improve reproducibility.
 
 The planned duration of the initiative is January 2019 to June 2019.
 Funding is made available up to €6000.
