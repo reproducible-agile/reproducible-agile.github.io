@@ -40,7 +40,7 @@ The initiative's members convene with invited experts on reproducibility, open s
 The group composition ensures familiarity with AGILE and RR-expertise in GIScience.
 The meeting will be prepared by online collaborations starting in 2018.
 
-The first draft of the guidelines will be presented in an one-hour **online webinar** during the workshop.
+The first draft of the guidelines will be presented in an one-hour **online webinar** during the expert meeting.
 All AGILE members are cordially invited to the webinar, which will be recorded and includes time for questions.
 The immediate feedback and comments from a 3-week consultation period after the webinar will be included in the **final draft**, which will be submitted to the AGILE council for consideration.
 
@@ -60,8 +60,19 @@ If the new guidelines are put in place, the **quality of AGILE conference submis
 When reproducibility becomes the norm outside of AGILE conference, senior and early career researchers in AGILE member labs will be well prepared.
 The AGILE conference series will remain a highly popular venue for impactful manuscripts. The activities establish RR and Open Science within the AGILE community and are a starting point for further actions (e.g. reproducibility chair, updates for syllabi at member labs, awards, badges etc.) to make AGILE a leading reproducible conference.
 
-## Workshop
+## Expert meeting
 
-Location & date: TBA
+**Date & location:** April 1-3 2019 at the [Chair of Environmental Technology & Design](https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/sections/environmental-technology-and-design/), [TU Delft](https://www.tudelft.nl/en/), The Netherlands
 
-Invited experts: TBA (feel free to self-nominate; contact daniel.nuest@uni-muenster.de)
+We are lucky to welcome the following experts to join the [initiative members](#initiative-members) for the expert meeting:
+
+- [Anita Graser](https://orcid.org/0000-0001-5361-2885) is scientist in the Center for Mobility Systems at the Austrian Institute of Technology ([AIT](https://www.ait.ac.at/#!/)), Vienna, Austria
+- [Barend Mons](https://orcid.org/0000-0003-3934-0072) is strategic director at the GO FAIR international Support & Coordination Office ([GFISCO](https://www.go-fair.org/countries/map/netherlands/)), Leiden, The Netherlands
+- [Karl Broman](https://orcid.org/0000-0002-4914-6671) is professor in the [Department of Biostatistics and Medical Informatics](https://www.biostat.wisc.edu/) at the [University of Wisconsin–Madison](https://www.wisc.edu/), USA
+- [Marta Teperek](https://orcid.org/0000-0001-8520-5598) is data stewardship coordinator with the [TU Delft Library](https://www.tudelft.nl/en/library/current-topics/research-data-management/research-data-management/data-stewardship/), [TU Delft](https://www.tudelft.nl), The Netherlands
+
+<!-- NN (eScience NL) -->
+
+## Pre-conference workshop
+
+See [2019 workshop website](/reproducible-agile/2019) for the pre-conference workshop organised as part of the AGILE initiative.
