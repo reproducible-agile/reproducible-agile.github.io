@@ -67,7 +67,7 @@ The AGILE conference series will remain a highly popular venue for impactful man
 We are lucky to welcome the following experts to join the [initiative members](#initiative-members) for the expert meeting:
 
 - [Anita Graser](https://orcid.org/0000-0001-5361-2885) is scientist in the Center for Mobility Systems at the Austrian Institute of Technology ([AIT](https://www.ait.ac.at/#!/)), Vienna, Austria
-- [Barend Mons](https://orcid.org/0000-0003-3934-0072) is strategic director at the GO FAIR international Support & Coordination Office ([GFISCO](https://www.go-fair.org/countries/map/netherlands/)), Leiden, The Netherlands
+- [Kristina Hettne](https://orcid.org/0000-0002-4182-7560) is Digital Scholarship Librarian in the Center for Digital Scholarship at the [Leiden University Library](https://www.library.universiteitleiden.nl/), The Netherlands
 - [Karl Broman](https://orcid.org/0000-0002-4914-6671) is professor in the [Department of Biostatistics and Medical Informatics](https://www.biostat.wisc.edu/) at the [University of Wisconsin–Madison](https://www.wisc.edu/), USA
 - [Marta Teperek](https://orcid.org/0000-0001-8520-5598) is data stewardship coordinator with the [TU Delft Library](https://www.tudelft.nl/en/library/current-topics/research-data-management/research-data-management/data-stewardship/), [TU Delft](https://www.tudelft.nl), The Netherlands
 
