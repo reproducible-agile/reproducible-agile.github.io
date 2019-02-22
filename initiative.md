@@ -70,8 +70,30 @@ We are lucky to welcome the following experts to join the [initiative members](#
 - [Kristina Hettne](https://orcid.org/0000-0002-4182-7560) is Digital Scholarship Librarian in the Center for Digital Scholarship at the [Leiden University Library](https://www.library.universiteitleiden.nl/), The Netherlands
 - [Karl Broman](https://orcid.org/0000-0002-4914-6671) is professor in the [Department of Biostatistics and Medical Informatics](https://www.biostat.wisc.edu/) at the [University of Wisconsin–Madison](https://www.wisc.edu/), USA
 - [Marta Teperek](https://orcid.org/0000-0001-8520-5598) is data stewardship coordinator with the [TU Delft Library](https://www.tudelft.nl/en/library/current-topics/research-data-management/research-data-management/data-stewardship/), [TU Delft](https://www.tudelft.nl), The Netherlands
-
 <!-- NN (eScience NL) -->
+
+### Agenda
+
+- **Monday**: introductions; review of existing guidelines and material; outlines, subgroups and tasks
+- **Tuesday**: author and reviewer guidelines - writing; local outreach; community webinar (see below)
+- **Wednesday**: feedback incorporation; wrap up & next steps
+
+### Community webinar
+
+<img style="float: right;" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2Fd4%2F40%2F0c%2Fd4400ce55966848cd5befc8074b2a679--les-simpson-homer-simpson.jpg&f=1" alt="drawing" width="200"/>
+
+_We want your feedback!_
+
+On **Tuesday, April 2, 2019 at [16:00 hrs CEST](https://www.timeanddate.com/worldclock/meetingdetails.html?year=2019&month=4&day=2&hour=14&min=0&sec=0&p1=16)**, the participants of the expert meeting will present the current state of the guidelines.
+The draft will be at an early stage, but the importance of input from the community is crucial.
+Please share the event with your colleagues or even join with your whole lab using the following link (see [GoToMeeting Attendee Guide](https://support.logmeininc.com/gotomeeting/attendee-user-guide) if you have not used G2M before):
+
+[https://global.gotomeeting.com/join/325882701](https://global.gotomeeting.com/join/325882701)
+
+The conference call is generously provided by [52°North Initiative for Geospatial Open Source Software GmbH](https://52north.org), a [recent AGILE member](https://agile-online.org/news/423-new-agile-members) and strong supporter of open innovation and open source software in science and beyond.
+
+[![52North logo](https://52north.org/wp-content/uploads/2016/06/logo-main.png)](https://52north.org)
+
 
 ## Pre-conference workshop
 
