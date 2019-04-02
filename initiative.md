@@ -78,23 +78,20 @@ We are lucky to welcome the following experts to join the [initiative members](#
 - **Tuesday**: author and reviewer guidelines - writing; local outreach; community webinar (see below)
 - **Wednesday**: feedback incorporation; wrap up & next steps
 
-### Community webinar
+## AGILE Reproducible Publication Guidelines - DRAFT
+
+❢ **[https://osf.io/phmce/](https://osf.io/phmce/)** ❢
+
+All material is provided openly via an Open Science Framework (OSF) project.
+
+## Feedback
 
 <img style="float: right;" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2Fd4%2F40%2F0c%2Fd4400ce55966848cd5befc8074b2a679--les-simpson-homer-simpson.jpg&f=1" alt="drawing" width="200"/>
 
 _We want your feedback!_
 
-On **Tuesday, April 2, 2019 at [16:00 hrs CEST](https://www.timeanddate.com/worldclock/meetingdetails.html?year=2019&month=4&day=2&hour=14&min=0&sec=0&p1=16)**, the participants of the expert meeting will present the current state of the guidelines.
-The draft will be at an early stage, but the importance of input from the community is crucial.
-Please share the event with your colleagues or even join with your whole lab using the following link (see [GoToMeeting Attendee Guide](https://support.logmeininc.com/gotomeeting/attendee-user-guide) if you have not used G2M before):
+On Tuesday, April 2, 2019 the expert meeting participants presented the current state of the guidelines.
+The questions and comments by the attendees were most helpful in improving the draft.
 
-[https://global.gotomeeting.com/join/325882701](https://global.gotomeeting.com/join/325882701)
-
-The conference call is generously provided by [52°North Initiative for Geospatial Open Source Software GmbH](https://52north.org), a [recent AGILE member](https://agile-online.org/news/423-new-agile-members) and strong supporter of open innovation and open source software in science and beyond.
-
-[![52North logo](https://52north.org/wp-content/uploads/2016/06/logo-main.png)](https://52north.org)
-
-
-## Pre-conference workshop
-
-See [2019 workshop website](/reproducible-agile/2019) for the pre-conference workshop organised as part of the AGILE initiative.
+**Feedback is still very welcome**, via the OSF project or Google documents (see above), via email, or at the [2019 pre-conference workshop on Reproducible Research](/reproducible-agile/2019).
+Join the initiative now and help to improve reproducibility, reusability, transparency and quality of AGILE conference publications.
