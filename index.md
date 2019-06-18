@@ -21,6 +21,10 @@ This website is home of workshops and an [AGILE INITIATIVE](https://agile-online
 - [Reproducible Research Publications](2018) (workshop, 2018)
 - [Reproducible Geosciences Discussion Forum](2017) (workshop, 2017)
 
+## Guidelines
+
+[**Reproducible Publications at AGILE Conferences – Guidelines for Authors and Reviewers**](https://doi.org/10.17605/OSF.IO/PHMCE)
+
 ## About
 
 Reproducibility and replicability of research gains more attention each year across many domains, some of which even struggle with a "reproducibility crisis".
