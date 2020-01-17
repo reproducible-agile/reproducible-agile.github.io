@@ -24,7 +24,11 @@ This website is home of workshops and an [AGILE INITIATIVE](https://agile-online
 
 ## Guidelines
 
-[**Reproducible Publications at AGILE Conferences – Guidelines for Authors and Reviewers**](https://doi.org/10.17605/OSF.IO/PHMCE)
+[**Reproducible Publications at AGILE Conferences – Guidelines for Authors and Reviewers** 🇺🇸🇬🇧🇳🇿🇦🇺](https://doi.org/10.17605/OSF.IO/CB7Z8)
+
+[**Reproducible Publications at AGILE Conferences – Spanish translation** 🇪🇸🇲🇽🇦🇷🇨🇴🇪🇨🇧🇴🇨🇷🇨🇺🇩🇴🇸🇻🇬🇶🇬🇹🇭🇳🇳🇮🇵🇦🇵🇾🇵🇪🇵🇷🇺🇾🇻🇪](https://doi.org/10.17605/OSF.IO/MF9BE) 
+
+Master project with all documentation about the initiative and creation of the guidelines: [https://osf.io/phmce/](https://osf.io/phmce/)
 
 ## About
 
