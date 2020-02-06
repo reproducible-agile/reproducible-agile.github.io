@@ -1,0 +1,328 @@
+---
+title: "Reproducibility Review AGILE 2020"
+author: "Daniel Nüst"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: yes
+    self_contained: true
+  #pdf_document:
+  #  toc: yes
+params:
+  private_info: yes
+---
+
+This document includes some scripts and text analysis to support the reproducibility review at the [AGILE conference 2020](https://agile-online.org/conference-2020), in Chania, Greece - _"Geospatial Technologies: seeding the future"_.
+
+Find out more about the reproducible publications at AGILE [here](https://doi.org/10.17605/OSF.IO/PHMCE) all about the review process at https://osf.io/eg4qx/.
+You can see the source code of the analysis in the R Markdown file [`agile-2020-papers.Rmd`](agile-2020-papers.Rmd).
+
+```{r load_libraries, message=FALSE, warning=FALSE, include=FALSE}
+library("pdftools")
+library("stringr")
+library("tidyverse")
+library("tidytext")
+library("wordcloud")
+library("RColorBrewer")
+library("here")
+library("quanteda")
+library("googledrive")
+library("kableExtra")
+```
+
+```{r seed, echo=FALSE}
+set.seed(23) # 23rd AGILE!
+```
+
+## Submitted full papers
+
+```{r fp_path, echo=FALSE}
+fp_path <- here::here("2020", "full_papers")
+#dir.create(fp_path, recursive = TRUE)
+```
+
+### Download files
+
+_The submitted full papers cannot be publicly shared._
+If you have access, put them in the directory `r fp_path`.
+
+```{r download_fp, echo=FALSE, eval=FALSE}
+drive_auth()
+fp_drive_dir <- drive_get("https://drive.google.com/drive/folders/1KcSjirs7pHXE88DfKK4LhEaGK4u4H-j_")
+fp_drive_dir_contents <- drive_ls(fp_drive_dir)
+for (i in rownames(fp_drive_dir_contents)) {
+  current_fp_drive <- fp_drive_dir_contents[i,]
+  drive_download(as_id(current_fp_drive$id), file.path(fp_path, current_fp_drive$name))
+}
+```
+
+### Load texts
+
+```{r load_files, echo=FALSE}
+fp_files <- dir(path = fp_path, pattern = ".pdf$", full.names = TRUE)
+
+id_from_path <- function(pre, path) {
+  name <- basename(path)
+  name <- str_replace(name, "AGILE2020_paper_", "") # remove common part of filename
+  name <- sapply(X = name, FUN = str_replace_all, pattern = "[_.-]|pdf", replacement = "")
+  name <- str_pad(name, width = 3, side = "left", pad = "0")
+  paste0(pre, "_", name)
+}
+
+fp_data <- tibble(id = id_from_path(pre = "fp", path = fp_files),
+                  path = fp_files,
+                  type = "full")
+#all_files <- bind_rows(fp_data, sp_data, po_data) %>%
+#  mutate(type = as.factor(type))
+all_files <- fp_data
+```
+
+The text is extracted from PDFs and it is processed to create a [tidy](https://www.jstatsoft.org/article/view/v059i10) data structure without [stop words](https://en.wikipedia.org/wiki/Stop_words).
+The stop words include specific words, which might be included in the page header, abbreviations, and terms particular to scientific articles, such as `figure`.
+
+```{r tidy_data, echo=FALSE}
+texts <- lapply(all_files$path, pdf_text)
+texts <- unlist(lapply(texts, str_c, collapse = TRUE))
+infos <- lapply(all_files$path, pdf_info)
+
+tidy_texts <- tibble(id = all_files$id,
+                     path = all_files$path,
+                     type = all_files$type,
+                     text = texts,
+                     pages = map_chr(infos, function(info) {info$pages}))
+
+# create a table of all words
+all_words <- tidy_texts %>%
+  select(id,
+         type,
+         text) %>%
+  unnest_tokens(word, text)
+
+# remove stop words and remove numbers
+my_stop_words <- tibble(
+  word = c(
+    "et",
+    "al",
+    "fig",
+    "e.g",
+    "i.e",
+    "http",
+    "ing",
+    "pp",
+    "figure",
+    "based",
+    "university",
+    "table"
+  ),
+  lexicon = "agile"
+)
+
+all_stop_words <- stop_words %>%
+  bind_rows(my_stop_words)
+suppressWarnings({
+  no_numbers <- all_words %>%
+    filter(is.na(as.numeric(word)))
+})
+
+no_stop_words <- no_numbers %>%
+  anti_join(all_stop_words, by = "word")
+
+total_words = nrow(all_words)
+after_cleanup = nrow(no_stop_words)
+```
+
+About `r round(after_cleanup/total_words * 100)`&nbsp;% of the words are considered stop words.
+
+The following tables shows how many words and non-stop words each document has, sorted by number of non-stop words.
+The `id` is built from the file name plus a prefix:
+for full papers, it is the left-padded submission number and the prefix `fp_`;
+<!--for short papers and posters, it is the submission number included in the file name and the prefixes `sp_` and `po_` respectively.-->
+
+```{r stop_words, echo=FALSE, message=FALSE, warning=FALSE}
+nsw_per_doc <- no_stop_words %>%
+  group_by(id) %>%
+  summarise(words = n()) %>%
+  rename(`non-stop words` = words)
+
+words_per_doc <- all_words %>%
+  group_by(id) %>%
+  summarise(words = n())
+
+inner_join(words_per_doc, nsw_per_doc) %>%
+  select(-starts_with("type")) %>%
+  bind_rows(tibble(id = "Total", words = sum(words_per_doc$words), `non-stop words` = sum(nsw_per_doc$`non-stop words`))) %>%
+  kable() %>%
+  kable_styling("striped", full_width = FALSE) %>%
+  row_spec(nrow(nsw_per_doc) + 1, bold = TRUE) %>%
+  scroll_box(height = "240px")
+```
+
+### Which papers include a "Data and Software Availability" section?
+
+According the the [AGILE Reproducible Paper Guidelines](https://osf.io/c8gtq/), all authors must add a _Data and Software Availability_ section to their paper.
+The guidelines are not mandatory yet in 2020, but let's see how many authors did include the statement.
+
+```{r pdfgrep, echo=FALSE, eval=FALSE}
+# Quick version with `pdfgrep`
+cmd <- paste("pdfgrep", "-e 'Data and Software Availability'", "-A 3", "2020/full_papers/*")
+output <- system(cmd, intern = TRUE)
+print(cmd)
+print(output)
+```
+
+```{r dasa_section, echo=FALSE}
+tidy_texts <- tidy_texts %>%
+  mutate(has_dasa = str_detect(tidy_texts$text, pattern = "Data and Software Availability"))
+
+dasa_count <- tidy_texts %>% filter(has_dasa) %>% nrow()
+
+excerpt_length <- 800
+dasa_texts <- tidy_texts %>%
+  filter(has_dasa) %>%
+  mutate(dasa_start = str_locate(.data$text, pattern = "Data and Software Availability")[,1]) %>%
+  mutate(dasa_text = str_sub(.data$text, start = dasa_start, end = dasa_start + excerpt_length)) %>%
+  select(id, dasa_text)
+```
+
+`r dasa_count` papers have the section in question, that is `r round(dasa_count/nrow(all_files) * 100)`&nbsp;% of all submissions.
+The first `r excerpt_length` characters of these sections are as follows.
+
+```{r dasa_section_table, echo=FALSE}
+dasa_texts %>%
+  kable() %>%
+  kable_styling("striped") %>%
+  scroll_box(height = "320px")
+```
+
+
+### Wordstem analysis
+
+```{r wordstem_data, include=FALSE}
+wordstems <- no_stop_words %>%
+  mutate(wordstem = quanteda::char_wordstem(no_stop_words$word))
+
+countPapersUsingWordstem <- function(the_word) {
+  sapply(the_word, function(w) {
+    wordstems %>%
+      filter(wordstem == w) %>%
+      group_by(id) %>%
+      count %>%
+      nrow
+  })
+}
+
+top_wordstems <- wordstems %>%
+  group_by(wordstem) %>%
+  tally %>%
+  arrange(desc(n)) %>%
+  head(20) %>%
+  mutate(`# papers` = countPapersUsingWordstem(wordstem)) %>%
+  mutate(`% papers` = round(countPapersUsingWordstem(wordstem)/nrow(all_files) * 100)) %>%
+  add_column(place = c(1:nrow(.)), .before = 0)
+
+minimum_occurence <- 100
+cloud_wordstems <- wordstems %>%
+  group_by(wordstem) %>%
+  tally %>%
+  filter(n >= minimum_occurence) %>%
+  arrange(desc(n))
+```
+
+For the following table and figure, the word stems were extracted based on a stemming algorithm from package [`quanteda`](https://cran.r-project.org/package=quanteda).
+The word cloud is based on `r length(unique(cloud_wordstems$wordstem))` unique words occuring each at least `r minimum_occurence` times, all in all occuring `r sum(cloud_wordstems$n)` times which comprises `r round(sum(cloud_wordstems$n)/ nrow(no_stop_words) * 100)`&nbsp;% of non-stop words.
+
+```{r top_wordstems, echo=FALSE}
+top_wordstems %>%
+  kable() %>%
+  kable_styling("striped") %>%
+  scroll_box(height = "320px")
+```
+
+```{r wordstemcloud, dpi=150, echo=FALSE, fig.cap="Wordstem cloud of AGILE 2020 full paper submissions"}
+wordcloud(cloud_wordstems$wordstem, cloud_wordstems$n,
+          max.words = Inf,
+          random.order = FALSE,
+          fixed.asp = FALSE,
+          rot.per = 0,
+          color = brewer.pal(8,"Dark2"))
+```
+
+## Reproducible research-related keywords
+
+The following tables lists how often terms related to reproducible research appear in each document.
+The detection matches full words using regex option `\b`.
+
+- reproduc (`reproduc.*`, reproducibility, reproducible, reproduce, reproduction)
+- replic (`replicat.*`, i.e. replication, replicate)
+- repeatab (`repeatab.*`, i.e. repeatability, repeatable)
+- software
+- (pseudo) code/script(s) [column name _code_]
+- algorithm (`algorithm.*`, i.e. algorithms, algorithmic)
+- process (`process.*`, i.e. processing, processes, preprocessing)
+- data (`data.*`, i.e. dataset(s), database(s))
+- result(s) (`results?`)
+- repository(ies) (`repositor(y|ies)`)
+
+```{r keywords_per_paper, echo=FALSE, warning=FALSE}
+tidy_texts_lower <- str_to_lower(tidy_texts$text)
+word_counts <- tibble(
+  id = tidy_texts$id,
+  type = tidy_texts$type,
+  DASA = tidy_texts$has_dasa,
+  `reproduc..` = str_count(tidy_texts_lower, "\\breproduc.*\\b"),
+  `replic..` = str_count(tidy_texts_lower, "\\breplicat.*\\b"),
+  `repeatab..` = str_count(tidy_texts_lower, "\\brepeatab.*\\b"),
+  `code` = str_count(tidy_texts_lower,
+    "(\\bcode\\b|\\bscript.*\\b|\\bpseudo\ code\\b)"),
+  software = str_count(tidy_texts_lower, "\\bsoftware\\b"),
+  `algorithm(s)` = str_count(tidy_texts_lower, "\\balgorithm.*\\b"),
+  `(pre)process..` = str_count(tidy_texts_lower, 
+                "(\\bprocess.*\\b|\\bpreprocess.*\\b|\\bpre-process.*\\b)"),
+  `data.*` = str_count(tidy_texts_lower, "\\bdata.*\\b"),
+  `result(s)` = str_count(tidy_texts_lower, "\\bresults?\\b"),
+  `repository/ies` = str_count(tidy_texts_lower, "\\brepositor(y|ies)\\b")
+)
+
+# https://stackoverflow.com/a/32827260/261210
+sumColsInARow <- function(df, list_of_cols, new_col) {
+  df %>% 
+    mutate_(.dots = ~Reduce(`+`, .[list_of_cols])) %>% 
+    setNames(c(names(df), new_col))
+}
+
+word_counts_sums <- sumColsInARow(
+  word_counts, 
+  names(word_counts)[!(names(word_counts) %in% c("id", "type"))], "all") %>%
+  arrange(desc(all))
+
+word_counts_sums_total <- word_counts_sums %>% 
+  summarise_if(is.numeric, funs(sum)) %>%
+  add_column(id = "Total", type = "", DASA = "", .before = 0)
+word_counts_sums <- rbind(word_counts_sums, word_counts_sums_total)
+
+word_counts_sums %>%
+  kable() %>%
+  kable_styling("striped", font_size = 12, bootstrap_options = "condensed")  %>%
+  row_spec(0, font_size = "x-small", bold = T)  %>%
+  row_spec(word_counts_sums %>% rownames_to_column() %>%
+             filter(DASA == TRUE, .preserve = TRUE) %>%
+             select(rowname) %>% unlist() %>% as.numeric(),
+           italic = TRUE, background = "#eeeeee") %>%
+  row_spec(nrow(word_counts_sums), bold = T)
+```
+
+## License & Metadata
+
+This document is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+All contained code is licensed under the [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/).
+
+**Runtime environment description:**
+
+```{r session_info}
+devtools::session_info(include_base = TRUE)
+```
+
+```{r upload_to_drive, eval=FALSE, include=FALSE}
+# upload the HTML file to the Reproducibility Committee shared folder
+drive_put("agile-2020-papers.html", path = "https://drive.google.com/drive/folders/1jyYj1hFqbR74D9ljjjcScR4lD3aWCO2U/")
+```

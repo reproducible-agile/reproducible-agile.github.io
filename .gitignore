@@ -57,3 +57,6 @@ public/poster/
 
 public/short_paper/
 .Rhistory
+.Rproj.user
+
+public/2020/full_papers/*.pdf
