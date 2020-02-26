@@ -37,8 +37,10 @@ set.seed(23) # 23rd AGILE!
 ## Submitted full papers
 
 ```{r fp_path, echo=FALSE}
-fp_path <- here::here("2020", "full_papers")
-#dir.create(fp_path, recursive = TRUE)
+fp_path <- here::here("2020", "full-paper")
+sp_path <- here::here("2020", "short-paper")
+po_path <- here::here("2020", "poster")
+#dir.create(po_path, recursive = TRUE)
 ```
 
 ### Download files
@@ -46,13 +48,34 @@ fp_path <- here::here("2020", "full_papers")
 _The submitted full papers cannot be publicly shared._
 If you have access, put them in the directory `r fp_path`.
 
-```{r download_fp, echo=FALSE, eval=FALSE}
+```{r drive_auth, echo=FALSE, eval=FALSE}
 drive_auth()
-fp_drive_dir <- drive_get("https://drive.google.com/drive/folders/1KcSjirs7pHXE88DfKK4LhEaGK4u4H-j_")
+```
+
+```{r download_fp, echo=FALSE, eval=FALSE}
+fp_drive_dir <- drive_get("https://drive.google.com/drive/folders/1FMsRlvouWPkpnHU4mJ6dIMDeTwSRgpUP")
 fp_drive_dir_contents <- drive_ls(fp_drive_dir)
 for (i in rownames(fp_drive_dir_contents)) {
-  current_fp_drive <- fp_drive_dir_contents[i,]
-  drive_download(as_id(current_fp_drive$id), file.path(fp_path, current_fp_drive$name))
+  current <- fp_drive_dir_contents[i,]
+  drive_download(as_id(current$id), file.path(fp_path, current$name))
+}
+```
+
+```{r download_sp, echo=FALSE, eval=FALSE}
+sp_drive_dir <- drive_get("https://drive.google.com/drive/folders/18F8hJhJupeGA5q6QKGw69QqEglGv12xg")
+sp_drive_dir_contents <- drive_ls(sp_drive_dir)
+for (i in rownames(sp_drive_dir_contents)) {
+  current <- sp_drive_dir_contents[i,]
+  drive_download(as_id(current$id), file.path(sp_path, current$name))
+}
+```
+
+```{r download_po, echo=FALSE, eval=FALSE}
+po_drive_dir <- drive_get("https://drive.google.com/drive/folders/17wznrw3tD-pa6fV-qw0KtH1da7vS7PBo")
+po_drive_dir_contents <- drive_ls(po_drive_dir)
+for (i in rownames(po_drive_dir_contents)) {
+  current <- po_drive_dir_contents[i,]
+  drive_download(as_id(current$id), file.path(po_path, current$name))
 }
 ```
 
@@ -60,6 +83,8 @@ for (i in rownames(fp_drive_dir_contents)) {
 
 ```{r load_files, echo=FALSE}
 fp_files <- dir(path = fp_path, pattern = ".pdf$", full.names = TRUE)
+sp_files <- dir(path = sp_path, pattern = ".pdf$", full.names = TRUE)
+po_files <- dir(path = po_path, pattern = ".pdf$", full.names = TRUE)
 
 id_from_path <- function(pre, path) {
   name <- basename(path)
@@ -72,9 +97,14 @@ id_from_path <- function(pre, path) {
 fp_data <- tibble(id = id_from_path(pre = "fp", path = fp_files),
                   path = fp_files,
                   type = "full")
-#all_files <- bind_rows(fp_data, sp_data, po_data) %>%
-#  mutate(type = as.factor(type))
-all_files <- fp_data
+sp_data <- tibble(id = id_from_path(pre = "sp", path = sp_files),
+                  path = sp_files,
+                  type = "short")
+po_data <- tibble(id = id_from_path(pre = "po", path = po_files),
+                  path = po_files,
+                  type = "poster")
+all_files <- bind_rows(fp_data, sp_data, po_data) %>%
+  mutate(type = as.factor(type))
 ```
 
 The text is extracted from PDFs and it is processed to create a [tidy](https://www.jstatsoft.org/article/view/v059i10) data structure without [stop words](https://en.wikipedia.org/wiki/Stop_words).
@@ -164,31 +194,55 @@ The guidelines are not mandatory yet in 2020, but let's see how many authors did
 
 ```{r pdfgrep, echo=FALSE, eval=FALSE}
 # Quick version with `pdfgrep`
-cmd <- paste("pdfgrep", "-e 'Data and Software Availability'", "-A 3", "2020/full_papers/*")
+cmd <- paste("pdfgrep", "-e 'Data and Software Availability'", "-i", "-A 3", "2020/*/*")
 output <- system(cmd, intern = TRUE)
 print(cmd)
 print(output)
 ```
 
 ```{r dasa_section, echo=FALSE}
+dasa_pattern <- regex("Data and Software Availability", ignore_case = TRUE)
 tidy_texts <- tidy_texts %>%
-  mutate(has_dasa = str_detect(tidy_texts$text, pattern = "Data and Software Availability"))
+  mutate(has_dasa = str_detect(tidy_texts$text, pattern = dasa_pattern))
 
 dasa_count <- tidy_texts %>% filter(has_dasa) %>% nrow()
 
 excerpt_length <- 800
 dasa_texts <- tidy_texts %>%
   filter(has_dasa) %>%
-  mutate(dasa_start = str_locate(.data$text, pattern = "Data and Software Availability")[,1]) %>%
+  mutate(dasa_start = str_locate(.data$text, pattern = dasa_pattern)[,1]) %>%
   mutate(dasa_text = str_sub(.data$text, start = dasa_start, end = dasa_start + excerpt_length)) %>%
   select(id, dasa_text)
 ```
 
 `r dasa_count` papers have the section in question, that is `r round(dasa_count/nrow(all_files) * 100)`&nbsp;% of all submissions.
+Here are the statistics per submission type:
+
+```{r dasa_statistics, echo=FALSE}
+dasa_stats <- tidy_texts %>%
+  filter(has_dasa) %>%
+  group_by(type, .drop = FALSE) %>%
+  summarise(n = n())
+
+dasa_stats <- left_join(dasa_stats, tidy_texts %>%
+                          group_by(type, .drop = FALSE) %>%
+                          summarise(submissions = n()),
+                        by = "type")
+
+dasa_stats <- dasa_stats %>%
+  mutate(`%` = n/submissions*100)
+
+dasa_stats %>%
+  arrange(desc(n)) %>%
+  kable() %>%
+  kable_styling("striped")
+```
+
 The first `r excerpt_length` characters of these sections are as follows.
 
 ```{r dasa_section_table, echo=FALSE}
 dasa_texts %>%
+  arrange(id) %>%
   kable() %>%
   kable_styling("striped") %>%
   scroll_box(height = "320px")
@@ -323,6 +377,7 @@ devtools::session_info(include_base = TRUE)
 ```
 
 ```{r upload_to_drive, eval=FALSE, include=FALSE}
-# upload the HTML file to the Reproducibility Committee shared folder
+# upload the HTML file and source code to the Reproducibility Committee shared folder
 drive_put("agile-2020-papers.html", path = "https://drive.google.com/drive/folders/1jyYj1hFqbR74D9ljjjcScR4lD3aWCO2U/")
+drive_put("agile-2020-papers.Rmd", path = "https://drive.google.com/drive/folders/1jyYj1hFqbR74D9ljjjcScR4lD3aWCO2U/")
 ```
