@@ -28,98 +28,132 @@ library("here")
 library("quanteda")
 library("googledrive")
 library("kableExtra")
+library("httr")
+library("xml2")
+library("rvest")
+library("tidyr")
+library("ggplot2")
 ```
 
 ```{r seed, echo=FALSE}
 set.seed(23) # 23rd AGILE!
 ```
 
-## Submitted full papers
+## Submitted papers
 
-```{r fp_path, echo=FALSE}
+```{r local_paths, echo=FALSE}
 fp_path <- here::here("2020", "full-paper")
 sp_path <- here::here("2020", "short-paper")
 po_path <- here::here("2020", "poster")
 #dir.create(po_path, recursive = TRUE)
+
+submissions_path <- here::here("2020")
 ```
 
-### Download files
+### Submission metadata
 
-_The submitted full papers cannot be publicly shared._
-If you have access, put them in the directory `r fp_path`.
-
-```{r drive_auth, echo=FALSE, eval=FALSE}
-drive_auth()
-```
-
-```{r download_fp, echo=FALSE, eval=FALSE}
-fp_drive_dir <- drive_get("https://drive.google.com/drive/folders/1FMsRlvouWPkpnHU4mJ6dIMDeTwSRgpUP")
-fp_drive_dir_contents <- drive_ls(fp_drive_dir)
-for (i in rownames(fp_drive_dir_contents)) {
-  current <- fp_drive_dir_contents[i,]
-  drive_download(as_id(current$id), file.path(fp_path, current$name))
+```{r submissions, echo=FALSE}
+if(is.na(Sys.getenv("easychair_username", unset = NA)) || is.na(Sys.getenv("easychair_password", unset = NA))) {
+  stop("Provide login details for EasyChair (e.g., in a file `.Renviron`) in environment variables",
+       "`easychair_username` and `easychair_password`")
 }
+
+# with help from https://github.com/kaytwo/easierchair/blob/master/scrape_easychair.py
+# https://stackoverflow.com/questions/23202522/r-httr-post-request-for-signing-in
+login_response <- NULL
+if(is.null(login_response)) {
+  login_response <- POST(url = "https://easychair.org/account/verify",
+                         body = list(name = Sys.getenv("easychair_username"),
+                                     password = Sys.getenv("easychair_password")),
+                         encode = "form")
+}
+
+submission_page <- httr::GET(url = "https://easychair.org/conferences/submissions?a=24268236")
+submission_html <- xml2::read_html(submission_page)
+submission_table_full <- html_node(submission_html, "#ec\\:table1")
+# remove first header row and set names manually later, because the vertical table headers are miages anyway
+xml_remove(xml_child(html_node(submission_table_full, "thead")))
+submission_table <- rvest::html_table(x = submission_table_full,
+                                      fill = TRUE)
+names(submission_table) <- c("id", "authors", "title", "information", "paper", "assigment", "update", "type", "time", "decision")
+submission_table$id <- str_pad(submission_table$id, width = 3, side = "left", pad = "0")
+submission_table <- submission_table  %>%
+  mutate_if(is.character, list(~na_if(.,"")))
+
+links <- html_nodes(submission_table_full, "a[href]") %>% html_attr("href")
+submission_table$information <- paste("https://easychair.org",
+                                      links[str_detect(links, pattern = "submission_view")], sep = "")
+# FIXME no. 033 has no file
+submission_table$paper <- R.utils::insert(paste("https://easychair.org",
+                                                links[str_detect(links, pattern = "download")],
+                                                sep = ""),
+                                          ats = which(submission_table$id == "033"),
+                                          values = NA)
+
+submission_table %>%
+  arrange(id) %>%
+  kable() %>%
+  kable_styling("striped") %>%
+  scroll_box(height = "480px")
 ```
 
-```{r download_sp, echo=FALSE, eval=FALSE}
-sp_drive_dir <- drive_get("https://drive.google.com/drive/folders/18F8hJhJupeGA5q6QKGw69QqEglGv12xg")
-sp_drive_dir_contents <- drive_ls(sp_drive_dir)
-for (i in rownames(sp_drive_dir_contents)) {
-  current <- sp_drive_dir_contents[i,]
-  drive_download(as_id(current$id), file.path(sp_path, current$name))
-}
-```
+### Download files from EasyChair
 
-```{r download_po, echo=FALSE, eval=FALSE}
-po_drive_dir <- drive_get("https://drive.google.com/drive/folders/17wznrw3tD-pa6fV-qw0KtH1da7vS7PBo")
-po_drive_dir_contents <- drive_ls(po_drive_dir)
-for (i in rownames(po_drive_dir_contents)) {
-  current <- po_drive_dir_contents[i,]
-  drive_download(as_id(current$id), file.path(po_path, current$name))
+```{r download_easychair, echo=FALSE}
+for (i in 1:nrow(submission_table)) {
+  if(is.na(submission_table[i,]$paper)) {
+    cat("No paper URL for ", i, "\n")
+    next
+  }
+  
+  current <- submission_table[i,]
+  filename <- file.path(submissions_path, paste0(current$id, ".pdf"))
+  if(!file.exists(filename)) {
+    httr::GET(url = submission_table[i,]$paper,
+              httr::write_disk(path = filename,
+                               overwrite = TRUE))
+  }
 }
+
+submission_files <- dir(path = submissions_path, pattern = ".pdf$", full.names = TRUE)
+
+submission_table <- left_join(submission_table,
+                              tibble("id" = str_match(submission_files, pattern = "([:digit:]*)\\.pdf")[,2],
+                                     "file" = submission_files),
+                              by = "id")
 ```
 
 ### Load texts
-
-```{r load_files, echo=FALSE}
-fp_files <- dir(path = fp_path, pattern = ".pdf$", full.names = TRUE)
-sp_files <- dir(path = sp_path, pattern = ".pdf$", full.names = TRUE)
-po_files <- dir(path = po_path, pattern = ".pdf$", full.names = TRUE)
-
-id_from_path <- function(pre, path) {
-  name <- basename(path)
-  name <- str_replace(name, "AGILE2020_paper_", "") # remove common part of filename
-  name <- sapply(X = name, FUN = str_replace_all, pattern = "[_.-]|pdf", replacement = "")
-  name <- str_pad(name, width = 3, side = "left", pad = "0")
-  paste0(pre, "_", name)
-}
-
-fp_data <- tibble(id = id_from_path(pre = "fp", path = fp_files),
-                  path = fp_files,
-                  type = "full")
-sp_data <- tibble(id = id_from_path(pre = "sp", path = sp_files),
-                  path = sp_files,
-                  type = "short")
-po_data <- tibble(id = id_from_path(pre = "po", path = po_files),
-                  path = po_files,
-                  type = "poster")
-all_files <- bind_rows(fp_data, sp_data, po_data) %>%
-  mutate(type = as.factor(type))
-```
 
 The text is extracted from PDFs and it is processed to create a [tidy](https://www.jstatsoft.org/article/view/v059i10) data structure without [stop words](https://en.wikipedia.org/wiki/Stop_words).
 The stop words include specific words, which might be included in the page header, abbreviations, and terms particular to scientific articles, such as `figure`.
 
 ```{r tidy_data, echo=FALSE}
-texts <- lapply(all_files$path, pdf_text)
-texts <- unlist(lapply(texts, str_c, collapse = TRUE))
-infos <- lapply(all_files$path, pdf_info)
+texts <- list()
+for (i in 1:nrow(submission_table)) {
+  current <- submission_table[i,]
+  #cat("Reading ", current$file, "\n")
+  the_text <- NA
+  if(!is.na(current$file)) {
+    the_text <- pdf_text(current$file)
+    the_text <- str_c(the_text, collapse = TRUE)
+  }
+  
+  names(the_text) <- current$id
+  texts <- c(texts, the_text)
+}
 
-tidy_texts <- tibble(id = all_files$id,
-                     path = all_files$path,
-                     type = all_files$type,
-                     text = texts,
-                     pages = map_chr(infos, function(info) {info$pages}))
+pages <- lapply(submission_table$file, function(f) {
+  if(is.na(f))
+    NA
+  else pdf_info(f)$pages
+})
+
+tidy_texts <- tibble(id = submission_table$id,
+                     path = submission_table$file,
+                     type = submission_table$type,
+                     text = unlist(texts),
+                     pages = pages)
 
 # create a table of all words
 all_words <- tidy_texts %>%
@@ -175,11 +209,10 @@ nsw_per_doc <- no_stop_words %>%
   rename(`non-stop words` = words)
 
 words_per_doc <- all_words %>%
-  group_by(id) %>%
+  group_by(id, type) %>%
   summarise(words = n())
 
 inner_join(words_per_doc, nsw_per_doc) %>%
-  select(-starts_with("type")) %>%
   bind_rows(tibble(id = "Total", words = sum(words_per_doc$words), `non-stop words` = sum(nsw_per_doc$`non-stop words`))) %>%
   kable() %>%
   kable_styling("striped", full_width = FALSE) %>%
@@ -212,10 +245,10 @@ dasa_texts <- tidy_texts %>%
   filter(has_dasa) %>%
   mutate(dasa_start = str_locate(.data$text, pattern = dasa_pattern)[,1]) %>%
   mutate(dasa_text = str_sub(.data$text, start = dasa_start, end = dasa_start + excerpt_length)) %>%
-  select(id, dasa_text)
+  select(id, type, dasa_text)
 ```
 
-`r dasa_count` papers have the section in question, that is `r round(dasa_count/nrow(all_files) * 100)`&nbsp;% of all submissions.
+`r dasa_count` papers have the section in question, that is `r round(dasa_count/nrow(submission_table) * 100)`&nbsp;% of all submissions.
 Here are the statistics per submission type:
 
 ```{r dasa_statistics, echo=FALSE}
@@ -230,7 +263,7 @@ dasa_stats <- left_join(dasa_stats, tidy_texts %>%
                         by = "type")
 
 dasa_stats <- dasa_stats %>%
-  mutate(`%` = n/submissions*100)
+  mutate(`%` = round(n/submissions*100, digits = 1))
 
 dasa_stats %>%
   arrange(desc(n)) %>%
@@ -271,7 +304,7 @@ top_wordstems <- wordstems %>%
   arrange(desc(n)) %>%
   head(20) %>%
   mutate(`# papers` = countPapersUsingWordstem(wordstem)) %>%
-  mutate(`% papers` = round(countPapersUsingWordstem(wordstem)/nrow(all_files) * 100)) %>%
+  mutate(`% papers` = round(countPapersUsingWordstem(wordstem)/nrow(submission_table) * 100)) %>%
   add_column(place = c(1:nrow(.)), .before = 0)
 
 minimum_occurence <- 100
@@ -301,7 +334,7 @@ wordcloud(cloud_wordstems$wordstem, cloud_wordstems$n,
           color = brewer.pal(8,"Dark2"))
 ```
 
-## Reproducible research-related keywords
+## Reproducible research-related keywords of all submissions
 
 The following tables lists how often terms related to reproducible research appear in each document.
 The detection matches full words using regex option `\b`.
@@ -363,6 +396,124 @@ word_counts_sums %>%
              select(rowname) %>% unlist() %>% as.numeric(),
            italic = TRUE, background = "#eeeeee") %>%
   row_spec(nrow(word_counts_sums), bold = T)
+```
+
+## Accepted full papers
+
+### Full paper decisions
+
+There is "accept" and "conditionally accept" (after second review)!
+
+```{r scrape_accepted, echo=FALSE}
+submission_table %>%
+  filter(type == "Full-paper") %>%
+  group_by(decision) %>%
+  summarise(count = n()) %>%
+  kable() %>%
+  kable_styling("striped")
+```
+
+```{r compile review data}
+#page <- httr::GET(url = "https://easychair.org/conferences/status?a=24268236")
+#review_status_page <- xml2::read_html(page)
+#review_table <- rvest::html_table(html_nodes(review_status_page, ".paperTable")[[1]], header = TRUE)
+#names(review_table)[4] <- "average"
+#names(review_table)[1] <- "id"
+#review_table$id <- str_pad(review_table$id, width = 3, side = "left", pad = "0")
+#
+## IMPORTANT: "Show paper authors" must be _un_ticked for the following code to work
+#review_table <- review_table %>%
+#  tidyr::separate(col = title, into = c("authors","title"), sep = "\\.+?", extra = "merge")
+#
+## the tr element of the review table has the internal paper ID in format "r4789577"
+#review_table$internal_id <- sapply(X = html_nodes(review_status_page, css = ".paperTable tr[id]"), FUN = function(row) {
+#  substr(html_attr(row, "id"), 2, 999)
+#})
+
+review_data <- left_join(submission_table, dasa_texts %>% select(-type),
+                         by = "id")
+
+review_data %>%
+  dplyr::filter(decision == "ACCEPT" | decision == "accept?") %>%
+  filter(type == "Full-paper") %>%
+  arrange(id) %>%
+  kable() %>%
+  kable_styling("striped") %>%
+  scroll_box(height = "320px")
+```
+
+### How does acceptance relate to DASA section availability for full papers?
+
+```{r accepted_dasa, echo=FALSE}
+dasa_vs_accepted <- tibble(papers = c("submitted",
+                  "submitted with DASA",
+                  "accepted",
+                  "accepted with DASA",
+                  "conditionally accepted",
+                  "conditionally accepted with DASA",
+                  "rejected with DASA"),
+       n = c(review_data %>%
+               filter(type == "Full-paper") %>%
+               nrow(.),
+             review_data %>%
+               filter(type == "Full-paper") %>%
+               filter(!is.na(dasa_text)) %>% 
+               nrow(.),
+             review_data %>%
+               dplyr::filter(decision == "ACCEPT") %>%
+               filter(type == "Full-paper") %>%
+               nrow(.),
+             review_data %>%
+               dplyr::filter(decision == "ACCEPT") %>%
+               filter(type == "Full-paper") %>%
+               filter(!is.na(dasa_text)) %>% 
+               nrow(.),
+             review_data %>%
+               dplyr::filter(decision == "accept?") %>%
+               filter(type == "Full-paper") %>%
+               nrow(.),
+             review_data %>%
+               dplyr::filter(decision == "accept?") %>%
+               filter(type == "Full-paper") %>%
+               filter(!is.na(dasa_text)) %>% 
+               nrow(.),
+             review_data %>%
+               dplyr::filter(decision == "REJECT") %>% 
+               filter(!is.na(dasa_text)) %>% 
+               nrow(.))
+)
+dasa_vs_accepted %>%
+  kable() %>%
+  kable_styling("striped")
+```
+
+------
+
+```{r accepted_dasa_barplot}
+review_data %>%
+  mutate(`has DASA` = !is.na(dasa_text)) %>%
+  filter(!is.na(decision)) %>%
+  #filter(decision != "REJECT") %>%
+  filter(type == "Full-paper") %>%
+  group_by(type, `has DASA`, decision) %>%
+  summarise(n = n()) %>%
+  ggplot(aes(x=decision, y=n, fill=`has DASA`)) +
+  geom_bar(stat="identity") + 
+  scale_fill_brewer(palette="Paired") +
+  labs(title = "AGILE 2020 Submissions Transparency & Reproducibility",
+       subtitle = "Data and Software Availability Sections (DASA) across accepted, conditionally accepted, and\nrejected full paper submissions") +
+  theme_minimal()
+```
+
+### How are the reviewer's comments regarding reproducibility?
+
+- Do reviewers estimates match the automatic detection of DASA?
+- How many comments are there regarding reproducibility
+
+### Reproducibility Reviewer "Get started" information
+
+```{r review_contents}
+# TODO for each accepted paper, print the title, DASA section excerpt, the reviewer comments, filename, and responsible reviewer initials
 ```
 
 ## License & Metadata
