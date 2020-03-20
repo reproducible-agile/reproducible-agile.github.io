@@ -16,7 +16,7 @@ keywords:
 
 This website is home of workshops and an [AGILE INITIATIVE](https://agile-online.org/funding-initiatives) on the topic of [Reproducible Research](https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research) in connection with the [Association of Geographic Information Laboratories in Europe's](https://agile-online.org/) (AGILE) [annual conference series](https://agile-online.org/past-conferences-and-proceedings).
 
-- [**AGILE conference 2020**](2020): _Introduction to reproducible research by means of the new AGILE Reproducible Paper Guidelines_ and _Reproducible research in practice: the AGILE Reproducible Paper Guidelines in action_ (workshops, 2020)
+- <span style="color: red;">⚠️ Conference is CANCELED ⚠️</span> [AGILE conference workshops 2020](2020): ~~_Introduction to reproducible research by means of the new AGILE Reproducible Paper Guidelines_ and _Reproducible research in practice: the AGILE Reproducible Paper Guidelines in action_~~
 - [Reproducible Publications at AGILE Conferences](initiative) (initiative & meeting, 2018-2019)
 - [Reproducible Research](2019) (workshop, 2019)
 - [Reproducible Research Publications](2018) (workshop, 2018)
