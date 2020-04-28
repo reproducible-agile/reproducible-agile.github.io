@@ -14,6 +14,8 @@ keywords:
 
 The AGILE council [generously supports](https://agile-online.org/agile-actions/current-initiatives/reproducible-publications-at-agile-conferences) an [initiative](https://agile-online.org/funding-initiatives) for development of new guidelines for AGILE conference submissions to improve reproducibility.
 
+**Find links to the created guideslines [on the main page](/#guidelines)** and read the [final report of the initiative](https://osf.io/hupxr/).
+
 The planned duration of the initiative is January 2019 to June 2019.
 Funding is made available up to €6000.
 
@@ -78,7 +80,7 @@ We are lucky to welcome the following experts to join the [initiative members](#
 - **Tuesday**: author and reviewer guidelines - writing; local outreach; community webinar (see below)
 - **Wednesday**: feedback incorporation; wrap up & next steps
 
-## AGILE Reproducible Publication Guidelines - DRAFT
+## AGILE Reproducible Publication Guidelines
 
 ❢ **[https://osf.io/phmce/](https://osf.io/phmce/)** ❢
 
