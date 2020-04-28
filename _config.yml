@@ -8,11 +8,11 @@ permalink:        /:year/:month/:day/:title/
 #relative_permalinks: true
 
 # Setup
-title: 'Reproducible Research Workshops at AGILE'
+title: 'Reproducible Research at AGILE'
 tagline: 'Reproducible Research @ AGILE'
-description: 'Workshop series at the <a href="https://agile-online.org/index.php/conference/" title="conference websites">AGILE International Conference on Geographic Information Science</a>'
-url: https://o2r.info/reproducible-agile
-baseurl: /reproducible-agile/
+description: 'Workshop series and reproducibility initiative at the <a href="https://agile-online.org/index.php/conference/" title="conference websites">AGILE International Conference on Geographic Information Science</a>'
+url: https://reproducible-agile.github.io
+baseurl: /
 
 keywords:
   - open access
@@ -28,18 +28,18 @@ keywords:
 
 author:
   name: 'workshop organization committee'
-  url: https://o2r.info/reproducible-agile/
+  url: https://reproducible-agile.github.io/
 
 exclude: [README.md, Gemfile, Gemfile.lock, Makefile]
 
 github:
-  repo: https://github.com/o2r-project/reproducible-agile/
+  repo: https://github.com/reproducible-agile/reproducible-agile.github.io
 
 # ribbon itself by https://github.com/simonwhitaker/github-fork-ribbon-css
 ribbon:
-  show: true
+  show: false
   text: 'RR Workshop 2019'
-  url: 'https://o2r.info/reproducible-agile/2019/#registration'
+  url: 'https://reproducible-agile.github.io/2019/#registration'
 
-gems:
+plugins:
   - jekyll-sitemap

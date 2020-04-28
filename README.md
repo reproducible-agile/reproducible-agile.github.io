@@ -1,8 +1,8 @@
 # Reproducible Computational Geosciences
 
-[![Join the chat at https://gitter.im/o2r-project/agile-2017](https://badges.gitter.im/o2r-project/agile-2017.svg)](https://gitter.im/o2r-project/agile-2017?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/reproducible-agile](https://badges.gitter.im/reproducible-agile/reproducible-agile.github.io.svg)](https://gitter.im/reproducible-agile?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[Go to workshop website](http://o2r.info/agile-2017/)
+[Go to workshop website](https://reproducible-agile.github.io/2017/)
 
 ## Site management
 
@@ -14,10 +14,6 @@ The design is based on [Hyde](https://github.com/poole/hyde) by Mark Otto.
 
 bundle exec jekyll serve # build the site
 ```
-
-The page is [build by Travis CI](https://travis-ci.org/o2r-project/agile-2017) (based on the files `.travis.yml` and `Gemfile`).
-
-[![Build Status](https://travis-ci.org/o2r-project/agile-2017.svg?branch=master)](https://travis-ci.org/o2r-project/agile-2017)
 
 ### Ribbon
 

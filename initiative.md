@@ -32,7 +32,7 @@ Funding is made available up to €6000.
 Reproducible research (RR) is a crucial topic for any research domain using computational processes, including GIScience.
 [Recent research](https://doi.org/10.7717/peerj.5072) has shown, that AGILE conference publications leave room for improvement regarding their computational reproducibility.
 While code & data availability seemed to be mentioned a bit more at the 2018 conference presentations, authors and reviewers lack clear guidelines to make workflow transparency the norm.
-This need is underpinned by the aforementioned publication and experiences from two [pre-conference workshops](https://o2r.info/reproducible-agile/).
+This need is underpinned by the aforementioned publication and experiences from two [pre-conference workshops](https://reproducible-agile.github.io/).
 
 The initiative will prepare **new author guidelines and reviewer guidelines** suitable for all submission types (full, short, poster).
 The guidelines help authors to prepare and reviewers to assess high-quality scholarly manuscripts by giving concrete recommendations for data and code repositories (e.g., OSF, GitLab), transparent workflows (e.g. Binder notebooks), citing software & data, and storing data (e.g. VGI).
