@@ -1,13 +1,13 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="https://agile-online.org/index.php/conference/" title="conference website"><img alt="Reproducible AGILE logo" class="center" src="{{site.baseurl}}/public/images/reproducible-AGILE-logo-square.svg" width="256px" /></a>
+      <a href="/" title="conference website"><img alt="Reproducible AGILE logo" class="center" src="{{site.baseurl}}/public/images/reproducible-AGILE-logo-square.svg" width="256px" /></a>
       {% comment %} <p class="lead">{{ site.tagline }}</p> {% endcomment %}
       <p class="lead_small">{{ site.description }}</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% unless page.url contains '/20' or page.url contains 'initiative' %} active{% endunless %}" href="{{ site.baseurl }}">Home</a>
+      <a class="sidebar-nav-item{% unless page.url contains '/20' or page.url contains 'initiative' %} active{% endunless %}" href="/">Home</a>
       <a class="sidebar-nav-item{% if page.url contains '2020' %} active{% endif %}" href="{{ site.baseurl }}/2020">2020</a>
       <a class="sidebar-nav-item{% if page.url contains '2019' %} active{% endif %}" href="{{ site.baseurl }}/2019">2019</a>
       <a class="sidebar-nav-item{% if page.url contains '2018' %} active{% endif %}" href="{{ site.baseurl }}/2018">2018</a>
