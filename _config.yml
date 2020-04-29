@@ -12,7 +12,7 @@ title: 'Reproducible Research at AGILE'
 tagline: 'Reproducible Research @ AGILE'
 description: 'Workshop series and reproducibility initiative at the <a href="https://agile-online.org/index.php/conference/" title="conference websites">AGILE International Conference on Geographic Information Science</a>'
 url: https://reproducible-agile.github.io
-baseurl: /
+baseurl: ""
 
 keywords:
   - open access
