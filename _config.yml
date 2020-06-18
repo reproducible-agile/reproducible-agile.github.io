@@ -37,9 +37,9 @@ github:
 
 # ribbon itself by https://github.com/simonwhitaker/github-fork-ribbon-css
 ribbon:
-  show: false
-  text: 'RR Workshop 2019'
-  url: 'https://reproducible-agile.github.io/2019/#registration'
+  show: true
+  text: 'Short Paper Postprints'
+  url: '/short-paper-postprints'
 
 plugins:
   - jekyll-sitemap
