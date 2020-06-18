@@ -9,7 +9,7 @@ keywords:
     - preprint
 ---
 
-# Citable AGILE Short Papers
+# Citable and Preserved AGILE Short Papers
 
 AGILE short papers from 2003 to 2019 from are published as  published as [_bronze Open Access_](https://en.wikipedia.org/wiki/Open_access#Bronze_OA).
 "Bronze" menas they lack a clearly identifyable license.
