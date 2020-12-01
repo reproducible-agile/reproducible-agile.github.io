@@ -1,6 +1,6 @@
 ---
-layout: default
-title: AGILE Short Paper Postprints
+layout: page
+title: Citable and Preserved AGILE Short Papers
 keywords:
     - open science
     - AGILE
@@ -8,8 +8,6 @@ keywords:
     - postprint
     - preprint
 ---
-
-# Citable and Preserved AGILE Short Papers
 
 AGILE short papers from 2003 to 2019 from are published as  published as [_bronze Open Access_](https://en.wikipedia.org/wiki/Open_access#Bronze_OA).
 "Bronze" menas they lack a clearly identifyable license.

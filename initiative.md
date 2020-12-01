@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Reproducible Publications at AGILE Conferences
 keywords:
     - reproducible research
@@ -9,8 +9,6 @@ keywords:
     - AGILE
     - inititative
 ---
-
-# Reproducible Publications at AGILE Conferences
 
 The AGILE council [generously supports](https://agile-online.org/agile-actions/current-initiatives/reproducible-publications-at-agile-conferences) an [initiative](https://agile-online.org/funding-initiatives) for development of new guidelines for AGILE conference submissions to improve reproducibility.
 
