@@ -27,6 +27,8 @@ This website is home of workshops and an [AGILE INITIATIVE](https://agile-online
 
 ## Guidelines
 
+<a href="https://doi.org/10.17605/OSF.IO/CB7Z8"><img src="{{ site.baseurl }}/public/images/agile-reproducible-paper-guidelines-v2-title-page.png" alt="guidelines title page" width="256" style="float: left; padding-right: 1em; border: 0;" /></a>
+
 [**Reproducible Publications at AGILE Conferences – Guidelines for Authors, Scientific Reviewers, and Reproducibility Reviewers** 🇺🇸🇬🇧🇳🇿🇦🇺](https://doi.org/10.17605/OSF.IO/CB7Z8) (December&nbsp;2020)
 
 [**Reproducible Publications at AGILE Conferences – Spanish translation** 🇪🇸🇲🇽🇦🇷🇨🇴🇪🇨🇧🇴🇨🇷🇨🇺🇩🇴🇸🇻🇬🇶🇬🇹🇭🇳🇳🇮🇵🇦🇵🇾🇵🇪🇵🇷🇺🇾🇻🇪](https://doi.org/10.17605/OSF.IO/MF9BE) (July&nbsp;2019)
