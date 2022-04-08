@@ -65,18 +65,19 @@ The **workshop objectives** are thus:
 
 ### Call for submissions (CfP)
 
-We invite all interested researchers to attempt a replication of a study of their choice, and to submit this work using [the short template](https://docs.google.com/document/d/1TClKwVSwuZz4gUZGq6ca99mFIcdy9XGy/).
+We invite all interested researchers to attempt a replication of a study of their choice, and to submit this work using **[this template](https://docs.google.com/document/d/1TClKwVSwuZz4gUZGq6ca99mFIcdy9XGy/)**.
 
 **Some guidelines for the replication attempt:**
+
 - The study to be replicated should concern some sort of quantitative spatial analysis.
-While the replication of other forms of research is of no less importance, replicating a study involving participants and more qualitative analysis might be beyond the scope of this workshop contribution. 
-However, the analysis to be replicated does not have to be the main focus of the published original study.
+  While the replication of other forms of research is of no less importance, replicating a study involving participants and more qualitative analysis might be beyond the scope of this workshop contribution. 
+  However, the analysis to be replicated does not have to be the main focus of the published original study.
 - There should be a scientific interest in replicating the original study. 
-Of particular interest are any studies for which generalizability or transferability of outcomes would advance our body of knowledge, and for which no replication has yet been attempted. 
+  Of particular interest are any studies for which generalizability or transferability of outcomes would advance our body of knowledge, and for which no replication has yet been attempted. 
 Generalizability and transferability apply to geographic and temporal scope (thus, replicating older studies would certainly be of interest) as well as robustness of analysis with respect to different methods.
 - The replication should attempt a major change in either input data or methods used.
- In the former case, the replication tries to answer whether the observed effect in the original study is potentially generalizable to different geographic regions, different time periods, or even different phenomena (all depending on the way the new input data differs from the original). 
- In the latter case, the interest in replication is whether the observed effect in the original study is also observable with different methods, or whether certain methods are more efficient and/or effective.
+  In the former case, the replication tries to answer whether the observed effect in the original study is potentially generalizable to different geographic regions, different time periods, or even different phenomena (all depending on the way the new input data differs from the original). 
+  In the latter case, the interest in replication is whether the observed effect in the original study is also observable with different methods, or whether certain methods are more efficient and/or effective.
 - Using a different software implementation of the same method (e.g., using R instead of Python or vice versa) is not considered a replication.
 - The chosen study can be from the same author (team) as the replication study!
 - It is perfectly fine to try and replicate one’s own work.
