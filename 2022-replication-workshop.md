@@ -32,8 +32,10 @@ This template asks for feedback on challenges and an interpretation of the resul
 These replication studies are then presented at the workshop, followed by plenary and group discussions on
 
 (a) the current role of replication studies in geospatial research,
+
 (b) obstacles to replication and ways to overcome or work around them, 
-(b) what constitutes success or failure in a geospatial replication study.
+
+(c) what constitutes success or failure in a geospatial replication study.
 
 After the workshop, at the minimum the reports and outcomes of the discussion are going to be integrated into a full journal paper with all contributors as co-authors.
 For inclusion as co-author, code and data (license permitting) will have to be made available in an open repository, such as the [Open Science Framework](https://osf.io/).
