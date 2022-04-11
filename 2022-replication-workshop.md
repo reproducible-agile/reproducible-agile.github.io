@@ -38,7 +38,7 @@ These replication studies are then presented at the workshop, followed by plenar
 (c) what constitutes success or failure in a geospatial replication study.
 
 After the workshop, at the minimum the reports and outcomes of the discussion are going to be integrated into a full journal paper with all contributors as co-authors.
-For inclusion as co-author, code and data (license permitting) will have to be made available in an open repository, such as the [Open Science Framework](https://osf.io/).
+**For inclusion as co-author, all code and data (license permitting) will have to be made available in an open repository, such as the [Open Science Framework](https://osf.io/).**
 Details will be decided as part of the workshop.
 Depending on interest by selected journals and the authors, another option is a special issue where the replication reports are expanded into full articles.
 
@@ -66,6 +66,8 @@ The **workshop objectives** are thus:
 ### Call for submissions (CfP)
 
 We invite all interested researchers to attempt a replication of a study of their choice, and to submit this work using **[this template](https://docs.google.com/document/d/1TClKwVSwuZz4gUZGq6ca99mFIcdy9XGy/)**.
+We encourage the use of an open repository to publish code and data already for the workshop contribution, as it will be mandatory for the planned journal article (see above).
+In addition to any other documentation, a repository should contain as official submission to the workshop a text document using the same structure as the template. 
 
 **Some guidelines for the replication attempt:**
 
@@ -79,12 +81,11 @@ Generalizability and transferability apply to geographic and temporal scope (thu
   In the former case, the replication tries to answer whether the observed effect in the original study is potentially generalizable to different geographic regions, different time periods, or even different phenomena (all depending on the way the new input data differs from the original). 
   In the latter case, the interest in replication is whether the observed effect in the original study is also observable with different methods, or whether certain methods are more efficient and/or effective.
 - Using a different software implementation of the same method (e.g., using R instead of Python or vice versa) is not considered a replication.
-- The chosen study can be from the same author (team) as the replication study!
-- It is perfectly fine to try and replicate one’s own work.
+- The chosen study can be from the same author (team) as the replication study! It is perfectly fine to try and replicate one’s own work.
 - All submitted reports will be subject to a short review by the workshop organizers to check whether the above-mentioned criteria (quantitative computation, spatial analysis, scientific interest in replication, sufficient information and evaluation) have been met.
 
 _If you are in doubt whether your plans are within scope and interest of the workshop, please do not hesitate to contact the organizers!_
 _The submission of a replication attempt is NOT a prerequisite for participation in the workshop!_
 However, without at least 2-3 replication attempts, the original plan for the workshop will have to be modified. 
 
-**Deadline**: 15 May 2022 by email, attaching the replication report as a single PDF
+**Deadline**: 15 May 2022 by email to the organizers, attaching the replication report as a single PDF or the link to the repository containing the materials (including a text document following the template's report structure!). 
