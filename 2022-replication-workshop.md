@@ -85,7 +85,9 @@ Generalizability and transferability apply to geographic and temporal scope (thu
 - All submitted reports will be subject to a short review by the workshop organizers to check whether the above-mentioned criteria (quantitative computation, spatial analysis, scientific interest in replication, sufficient information and evaluation) have been met.
 
 _If you are in doubt whether your plans are within scope and interest of the workshop, please do not hesitate to contact the organizers!_
+
 _The submission of a replication attempt is NOT a prerequisite for participation in the workshop!_
+
 However, without at least 2-3 replication attempts, the original plan for the workshop will have to be modified. 
 
 **Deadline**: 15 May 2022 by email to the organizers, attaching the replication report as a single PDF or the link to the repository containing the materials (including a text document following the template's report structure!). 
