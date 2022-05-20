@@ -90,4 +90,4 @@ _The submission of a replication attempt is NOT a prerequisite for participation
 
 However, without at least 2-3 replication attempts, the original plan for the workshop will have to be modified. 
 
-**Deadline**: 15 May 2022 by email to the organizers, attaching the replication report as a single PDF or the link to the repository containing the materials (including a text document following the template's report structure!). 
+**Deadline**: Register for participation by 31 May 2022 by email to the organizers. If you have completed or attempted a replication, please attach the replication report as a single PDF or the link to the repository containing the materials (including a text document following the template's report structure!). 
