@@ -17,6 +17,27 @@ The Reproducible AGILE team is happy to contribute to the AGILE conference 2022 
 
 ## 1st AGILE Workshop on Replication in Geospatial Research
 
+**Update 08-06-22**
+
+Since we have not received sufficient submissions of replications, we decided to change the agenda as follows: 
+
+09:30 Round of introductions by everyone
+
+09:45 Setting the scene: Replication in GIScience (presentation by workshop organizers)
+
+10:15 Plenary discussion to arrive at a shared understanding of replication in GIScience
+
+11:00 Break
+
+11:15 Developing a concrete work plan for a joint paper to explore replication in GIScience (working in small teams)
+
+12:45 Write-up and wrap-up
+
+13:00 End of workshop
+
+The objectives of the workshop have not changed (see below for more details). 
+If you have questions, don't hesitate to contact us!
+
 ### About
 
 [Prior workshops](/) at AGILE have investigated the need for reproducibility and its state at AGILE, leading to the establishing of a [reproducibility review for all accepted full papers running for the third time](/2022).
