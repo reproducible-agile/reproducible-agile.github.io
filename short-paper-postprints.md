@@ -25,7 +25,7 @@ _Please self-archive your AGILE short papers!_
 2. Download the file and add a statement to the first page clearly documenting the paper's origin.
    This cover page should include name, time and place of the conference, the URL to the conference website, and a statement that the short paper is peer reviewed.
 
-   _This online application can help you with the cover page:_ **[https://agile-postprint-stamp.herokuapp.com/](https://agile-postprint-stamp.herokuapp.com/)** ([source code](https://github.com/reproducible-agile/agile-postprint-stamp))
+   ~~_This online application can help you with the cover page:_~~ The online application for stamping your PDF is _not available_ anymore, but you can run it from source at ([source code](https://github.com/reproducible-agile/agile-postprint-stamp)).
 
    <a href="https://agile-postprint-stamp.herokuapp.com/" title="AGILE short paper stamp generator"><img src="https://raw.githubusercontent.com/reproducible-agile/agile-postprint-stamp/main/agile-postprint-stamp.png" width="200px"></a>
 3. Submit the PDF to a preprint server of your choice (if you're unsure, try [EarthArXiv](https://eartharxiv.org/)) and include a link to the permission statement in the submission notes to ensure a smooth process.
