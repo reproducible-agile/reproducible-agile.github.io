@@ -7,10 +7,14 @@
 ## Site management
 
 The design is based on [Hyde](https://github.com/poole/hyde) by Mark Otto.
+The instructions assume you manage your Ruby installation with [`rvm`](https://rvm.io/).
 
 ```bash
-# install required software
-# 
+# install required software (if you're using a different system, consider deleting Gemfile.lock for a working configuration)
+# rvm install ruby-2.7 --with-openssl-dir=$HOME/.rvm/usr (on Ubuntu 22.04, see https://stackoverflow.com/questions/72179373/cant-install-ruby-via-rvm-error-running-rvm-make-j4-on-ubuntu-22-04)
+# bundle install
+
+rvm use ruby-2.7
 
 bundle exec jekyll serve # build the site
 ```
