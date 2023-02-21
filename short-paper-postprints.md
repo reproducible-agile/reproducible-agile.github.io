@@ -27,7 +27,7 @@ _Please self-archive your AGILE short papers!_
 
    ~~_This online application can help you with the cover page:_~~ The online application for stamping your PDF is _not available_ anymore, but you can run it from source at ([source code](https://github.com/reproducible-agile/agile-postprint-stamp)).
 
-   <a href="https://raw.githubusercontent.com/reproducible-agile/agile-postprint-stamp/main/agile-postprint-stamp.png" title="AGILE short paper stamp generator screenshot"><img src="" width="200px"></a>
+   <a href="https://raw.githubusercontent.com/reproducible-agile/agile-postprint-stamp/main/agile-postprint-stamp.png" title="AGILE short paper stamp generator screenshot"><img src="https://raw.githubusercontent.com/reproducible-agile/agile-postprint-stamp/main/agile-postprint-stamp.png" width="200px"></a>
 3. Submit the PDF to a preprint server of your choice (if you're unsure, try [EarthArXiv](https://eartharxiv.org/)) and include a link to the permission statement in the submission notes to ensure a smooth process.
    If possible add the tags or keywords `AGILE short paper` and `AGILEGIS`, and configure the recommended citation to include year and name of the conference.
 4. Update your reference lists: add the DOI to the recommended citation of the paper.
