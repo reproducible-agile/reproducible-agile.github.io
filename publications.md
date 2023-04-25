@@ -15,7 +15,7 @@ keywords:
 <!-- https://citation.crosscite.org/ apa en-US -->
 <!-- Don't forget to add the BibTex entry to the file public/reproducible-agile.bib -->
 
-- Nüst, D., Ostermann, F. O., & Granell, C.: **A peer review process for higher reproducibility of publications in GIScience can also work for Earth System Sciences**, EGU General Assembly 2023, Vienna, Austria, 24–28 Apr 2023, EGU23-15384, <https://doi.org/10.5194/egusphere-egu23-15384>, 2023. [[slides](https://bit.ly/peer-review-process-ess)]
+- Nüst, D., Ostermann, F. O., & Granell, C. (2023). **A peer review process for higher reproducibility of publications in GIScience can also work for Earth System Sciences**, EGU General Assembly 2023, Vienna, Austria, 24–28 Apr 2023, EGU23-15384. <https://doi.org/10.5194/egusphere-egu23-15384>. [[slides](https://bit.ly/peer-review-process-ess)]
 
 - Ostermann, F. O., Nüst, D., Granell, C., Hofer, B., & Konkol, M. (2021). **Reproducible Research and GIScience: An Evaluation Using GIScience Conference Papers**. Schloss Dagstuhl - Leibniz-Zentrum Für Informatik. [https://doi.org/10.4230/LIPICS.GISCIENCE.2021.II.2](https://doi.org/10.4230/LIPICS.GISCIENCE.2021.II.2)
   
