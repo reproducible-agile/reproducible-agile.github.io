@@ -51,13 +51,13 @@ The events introduce interested scientists and developers to the concepts of rep
 
 ## Team
 
-Are you interested in improving reproducibility of research? _[Join the team!](https://discourse.agile-online.org/t/wanted-new-team-members-for-reproducible-research-workshop-series/26)_
+Are you interested in improving reproducibility of research? _Join the team_ and reach out to the contact persons below!
 
 ### Active team members
 
-- [Daniel Nüst](https://orcid.org/0000-0002-0024-5046) (ifgi), daniel.nuest@tu-dresden.de (main contact), [@nuest](https://github.com/nuest)
+- [Daniel Nüst](https://orcid.org/0000-0002-0024-5046) (TU Dresden), daniel.nuest@tu-dresden.de (main contact), [@nuest](https://github.com/nuest)
 - [Frank Ostermann](https://orcid.org/0000-0002-9317-8291) (ITC), f.o.ostermann@utwente.nl, [@foost](https://github.com/foost)
-- [Carlos Granell](https://orcid.org/0000-0003-1004-9695) (Jaume&nbsp;I)
+- [Carlos Granell](https://orcid.org/0000-0003-1004-9695) (Jaume&nbsp;I), [@cgranell](https://github.com/cgranell)
 
 ### Former team members
 
@@ -65,3 +65,7 @@ Are you interested in improving reproducibility of research? _[Join the team!](h
 - [Valentina Cerutti](https://orcid.org/0000-0002-9612-1581) (ITC)
 - [Barbara Hofer](https://orcid.org/0000-0001-7078-3766) (Z_GIS)
 - [Markus Konkol](https://orcid.org/0000-0001-6651-0976) (52°North), [@MarkusKonk](https://github.com/MarkusKonk)
+
+### Reproducibility Reviewers
+
+See the left hand menu for information on each annual reproducibility review and the contributors.
