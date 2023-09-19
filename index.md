@@ -16,6 +16,14 @@ keywords:
 
 This website is home of workshops and an [AGILE INITIATIVE](https://agile-online.org/funding-initiatives) on the topic of [Reproducible Research](https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research) in connection with the [Association of Geographic Information Laboratories in Europe's](https://agile-online.org/) (AGILE) [annual conference series](https://agile-online.org/past-conferences-and-proceedings).
 
+Reproducible AGILE implements the [CODECHECK principles](https://codecheck.org.uk/) for an independent execution of computations underlying research articles as part of the peer review at the AGILE conference.
+
+<a href="https://codecheck.org.uk/"><img src="https://codecheck.org.uk/img/codecheck_logo.svg" alt="CODECHECK logo" width="256" style="padding: 1em; border: 0;" /></a>
+
+----------
+
+## Contents
+
 - [Reproducibility review 2024](2024)
 - [Reproducibility review 2023](2023)
 - [Reproducibility review](2022) and [replication workshop](2022-replication-workshop) 2022
