@@ -24,6 +24,7 @@ Reproducible AGILE implements the [CODECHECK principles](https://codecheck.org.u
 
 ## Contents
 
+- [Reproducibility review 2025](2025)
 - [Reproducibility review 2024](2024)
 - [Reproducibility review 2023](2023)
 - [Reproducibility review](2022) and [replication workshop](2022-replication-workshop) 2022
