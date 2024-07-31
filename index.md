@@ -66,16 +66,16 @@ Are you interested in improving reproducibility of research? _Join the team_ and
 
 ### Active team members
 
-- [Daniel Nüst](https://orcid.org/0000-0002-0024-5046) (TU Dresden), daniel.nuest@tu-dresden.de (main contact), [@nuest](https://github.com/nuest)
+- [Daniel Nüst](https://orcid.org/0000-0002-0024-5046) (TU Dresden), daniel.nuest@tu-dresden.de (main contact), [@nuest](https://github.com/nuest) <img alt="Early Career Researcher badge" title="Early Career Researcher" src="https://img.shields.io/badge/ECR-FBCA2F" style="display: inline; margin: 0;">
 - [Frank Ostermann](https://orcid.org/0000-0002-9317-8291) (ITC), f.o.ostermann@utwente.nl, [@foost](https://github.com/foost)
 - [Carlos Granell](https://orcid.org/0000-0003-1004-9695) (Jaume&nbsp;I), [@cgranell](https://github.com/cgranell)
 
 ### Former team members
 
-- [Rusne Sileryte](https://orcid.org/0000-0002-8245-3016) (TU&nbsp;Delft)
-- [Valentina Cerutti](https://orcid.org/0000-0002-9612-1581) (ITC)
+- [Rusne Sileryte](https://orcid.org/0000-0002-8245-3016) (TU&nbsp;Delft) <img alt="Early Career Researcher badge" title="Early Career Researcher" src="https://img.shields.io/badge/ECR-FBCA2F" style="display: inline; margin: 0;">
+- [Valentina Cerutti](https://orcid.org/0000-0002-9612-1581) (ITC) <img alt="Early Career Researcher badge" title="Early Career Researcher" src="https://img.shields.io/badge/ECR-FBCA2F" style="display: inline; margin: 0;">
 - [Barbara Hofer](https://orcid.org/0000-0001-7078-3766) (Z_GIS)
-- [Markus Konkol](https://orcid.org/0000-0001-6651-0976) (52°North), [@MarkusKonk](https://github.com/MarkusKonk)
+- [Markus Konkol](https://orcid.org/0000-0001-6651-0976) (52°North), [@MarkusKonk](https://github.com/MarkusKonk) <img alt="Early Career Researcher badge" title="Early Career Researcher" src="https://img.shields.io/badge/ECR-FBCA2F" style="display: inline; margin: 0;">
 
 ### Reproducibility Reviewers
 
