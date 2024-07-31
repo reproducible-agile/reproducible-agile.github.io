@@ -51,7 +51,8 @@ The main OSF project with all documentation about the initiative and creation of
 
 Reproducibility and replicability of research gains more attention each year across many domains, some of which even struggle with a "reproducibility crisis".
 However, at AGILE conferences, the topic is underrepresented.
-Recent research found that none of the last years nominees for best papers (both short & full papers) provided sufficient information (i.e. instructions, data, and code) to be reproduced independently by a third party.
+Recent research found that none of the nominees for best papers (both short & full papers) provided sufficient information (i.e. instructions, data, and code) to be reproduced independently by a third party.
+Until the introduction of reproducibility guidelines and a reproducibility review, that is.
 
 Learn more about the state of reproducibility at AGILE and what can be done about it in the peer-reviewed articles ["Reproducible research and GIScience: an evaluation using _AGILE conference_ papers"](https://doi.org/10.7717/peerj.5072) and [Reproducible Research and GIScience: An Evaluation Using _GIScience Conference_ Papers](https://doi.org/10.4230/LIPICS.GISCIENCE.2021.II.2).
 Read more about past, ongoing, and future activities & strategy in the preprint ["Reproducible Research is like riding a bike"](https://doi.org/10.7287/peerj.preprints.27216v1) presented at the 5th Open Source Geospatial Research and Education Symposium ([OGRS 2018](http://2018.ogrs-community.org/)).
@@ -79,3 +80,4 @@ Are you interested in improving reproducibility of research? _Join the team_ and
 ### Reproducibility Reviewers
 
 See the left hand menu for information on each annual reproducibility review and the contributors.
+Being a member of the reproducibility committee is an excellent opportunity for early career researchers (ECRs) to build knowledge in scholarly publishing processes and to apply and deepen practical research skills around data and code.
