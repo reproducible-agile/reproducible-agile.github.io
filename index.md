@@ -26,7 +26,7 @@ Reproducible AGILE implements the [CODECHECK principles](https://codecheck.org.u
 
 - [Reproducibility review](2026) and [workshop](2026-workshop) 2026
 - [Reproducibility review 2025](2025)
-- [Reproducibility review 2024](2024)
+- [Reproducibility review 2024](2024) and [AGILE PhD school 2024](https://begin-standrews.github.io/agilephdschool2024/) 
 - [Reproducibility review 2023](2023)
 - [Reproducibility review](2022) and [replication workshop](2022-replication-workshop) 2022
 - [AGILE PhD school 2022](2022-phd-school)
