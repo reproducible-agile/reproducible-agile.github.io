@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Workshop 'Reaping the benefits of open and reproducible research' @ AGILE '26
+title: Workshop 'Reaping the benefits of open and reproducible research' @ AGILE'26
 keywords:
     - replicable research
     - replicability
@@ -8,8 +8,34 @@ keywords:
     - skill building
 ---
 
-### About 
-AGILE has made significant steps towards more open and reproducible research (ORR) publications, overall improving the quality of the scientific contributions from and for the community, such as reproducible publications at the conference, or reproducibility education at PhD schools. However, recent observations have shown that the rate of improvement of the conference papers‘ reproducibility has slowed. This begs the question if a plateau has been reached, while the benefits in terms of greater uptake of results has yet to materialize. This workshop aims to address both issues: whether a plateau has been reached in terms of reproducibility, and if so, what the implications are; and what we can do to increase uptake of established or new ORR practices in GIScience.
+### About
+
+AGILE has made significant steps towards more open and reproducible research (ORR) publications: Reproducible publications at the conference or reproducibility education at PhD schools help to improve the quality of the scientific contributions from and for the community. It is now time to start reaping the benefits of ORR publications by increasing the uptake of results and building on published research outputs to create a collaborative ecosystem of active, iterative exchange. The participants of the workshop “Reproducible Research” at AGILE 2026 conference on June 16 will take the first pioneering steps towards this goal.
+
+One core objective of the workshop is to increase the practice of advanced open research practices and explore the replication of published AGILE research papers. We define replication as keeping the overall research question of the study but changing either (a) input data (e.g., a different geographic area of study) to see if the analysis outcomes are replicable, or (b) method (e.g., a significantly different clustering or machine learning algorithm) to see if the analysis is robust.
+
+To kick-start the practical replications, this call solicits **suggestions for studies to reproduce** from you. During the second half of the workshop, you pitch your replication or robustness check proposal to the workshop participants. We then form groups to begin work on a preregistration for a study. After the workshop, the groups continue with the replication study and submit at a suitable journal. We are in discussion with several journals to ensure that workshop outputs fit their scope. 
+
+We aim for a maximum of 6 pitches. If we receive more than 6 proposals for a replication study, the workshop organizers will select 6 pitches based on the following criteria:
+
+- Relevance: Is the proposed replication study relevant to the AGILE community and scientifically sound?
+
+- Suitability: Is the scope for a replication clearly defined?
+
+- Feasibility: Can the replication be conducted with the available/suggested resources?
+
+Should we still have more than 6 submissions after applying these criteria, contributions that propose to replicate studies published in the AGILE proceedings will be given priority. 
+
+What should your proposal for a replication study look like?
+
+1.	Only one proposal per participant
+2.	Up to two pages, including figures and references.
+3.	Outline of the proposed replication study
+4.	Short justification using the criteria mentioned above
+5.	Assuming that you want to play a key role in the replication study: What required skills do you bring, and what other skills does the team need?
+
+Please submit as PDF via e-mail to **f.o.ostermann@utwente.nl** by 11 May 2026. We will notify you about acceptance by 22 May. 
+
 
 **Objective(s)**
 
