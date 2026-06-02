@@ -13,16 +13,16 @@ keywords:
 ---
 
 <!-- https://citation.crosscite.org/ apa en-US -->
-<!-- Don't forget to add the BibTex entry to the file public/reproducible-agile.bib -->
+<!-- Don't forget to add the BibTex entry to the file public/reproducible-agile.bib using https://www.doi2bib.org -->
 
+- Granell, C., Ostermann, F., Nüst, D., Kedron, P., Koukouraki, E., Matey-Sanz, M., Decoupes, R., Trilles, S., Graser, A., & Niers, T. (2025). **Longitudinal assessment of research in GIScience domain shows a positive impact of reproducible research practices**. California Digital Library (CDL). <https://doi.org/10.31223/x5rj3w> (preprint)
+- Nüst, D. (2026). **Code execution in peer review for your favourite conference or journal with CODECHECK**. Zenodo. <https://doi.org/10.5281/ZENODO.20084769> (slides)
 - Nüst, D., Ostermann, F. O., & Granell, C. (2023). **A peer review process for higher reproducibility of publications in GIScience can also work for Earth System Sciences**, EGU General Assembly 2023, Vienna, Austria, 24–28 Apr 2023, EGU23-15384. <https://doi.org/10.5194/egusphere-egu23-15384>. [[slides](https://bit.ly/peer-review-process-ess)]
-
 - Ostermann, F. O., Nüst, D., Granell, C., Hofer, B., & Konkol, M. (2021). **Reproducible Research and GIScience: An Evaluation Using GIScience Conference Papers**. Schloss Dagstuhl - Leibniz-Zentrum Für Informatik. [https://doi.org/10.4230/LIPICS.GISCIENCE.2021.II.2](https://doi.org/10.4230/LIPICS.GISCIENCE.2021.II.2)
   
   Paper won the _Award for Best Paper_ at the GIScience 2021 conference!
 
   ![Award for Best Paper, GIScience 2021]({{ site.baseurl }}/public/images/giscience2021-best-paper-award.png)
-
 - Nüst, D., Ostermann, F., Granell, C., & Kmoch, A. (2020). **Improving reproducibility of geospatial conference papers – lessons learned from a first implementation of reproducibility reviews**. Septentrio Conference Series, 4. [https://doi.org/10.7557/5.5601](https://doi.org/10.7557/5.5601) (abstract, slides, and video)
 - Ostermann, F., Nüst, D., Granell, C., Hofer, B., & Konkol, M. (2020). **Reproducible Research and GIScience: an evaluation using GIScience conference papers** (preprint). EarthArXiv. [https://doi.org/10.31223/x5zk5v](https://doi.org/10.31223/x5zk5v)
 - Granell, C., Nüst, D., Ostermann, F. O., & Sileryte, R. (2018). **Reproducible Research is like riding a bike**. PeerJ Preprints. [https://doi.org/10.7287/peerj.preprints.27216v1](https://doi.org/10.7287/peerj.preprints.27216v1)
