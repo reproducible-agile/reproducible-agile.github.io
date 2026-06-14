@@ -8,6 +8,8 @@ keywords:
     - skill building
 ---
 
+> [UPDATE] Unfortunately, we did not receive enough submissions to stick to original plan of having participants pitch their suggestions. Instead, we will determine together during the workshop suitable AGILE papers for a replication effort.
+
 ### About
 
 AGILE has made significant steps towards more open and reproducible research (ORR) publications: Reproducible publications at the conference or reproducibility education at PhD schools help to improve the quality of the scientific contributions from and for the community. It is now time to start reaping the benefits of ORR publications by increasing the uptake of results and building on published research outputs to create a collaborative ecosystem of active, iterative exchange. The participants of the workshop “Reproducible Research” at AGILE 2026 conference on June 16 will take the first pioneering steps towards this goal.
